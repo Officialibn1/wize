@@ -43,6 +43,15 @@ const SignUpForm = () => {
 				/>
 			</label>
 
+			<label>
+				<span>Confirm Password</span>
+				<input
+					type='password'
+					id='confirmPassword'
+					placeholder='Confirm your password'
+				/>
+			</label>
+
 			<button>Signup</button>
 			<p>
 				Have an account? <Link href={"/login"}>Login</Link>
