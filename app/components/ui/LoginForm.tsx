@@ -1,16 +1,18 @@
 import Link from "next/link";
 import React from "react";
+import "@/app/components/styles/LoginForm.css";
 
 const LoginForm = () => {
 	return (
-		<form>
-			<legend>Login</legend>
+		<form className='formElement'>
+			<legend>Account Login</legend>
 
 			<label>
 				<span>Email / Username</span>
 				<input
 					type='text'
 					id='name'
+					placeholder='Enter your name / username'
 				/>
 			</label>
 
@@ -19,11 +21,12 @@ const LoginForm = () => {
 				<input
 					type='password'
 					id='password'
+					placeholder='Enter your password'
 				/>
 			</label>
 
 			<div>
-				<label>
+				<label className='inputCheck'>
 					<input
 						type='checkbox'
 						name='rememberMe'
@@ -37,7 +40,7 @@ const LoginForm = () => {
 
 			<button>Login</button>
 			<p>
-				Don&apos;t have an account ?<Link href={"/signup"}>Sign Up</Link>
+				Don&apos;t have an account? <Link href={"/signup"}>Sign Up</Link>
 			</p>
 		</form>
 	);

@@ -10,13 +10,6 @@ const DashboardPage = () => {
 		<div className='flex flex-col gap-5 items-center'>
 			DashboardPage
 			<UserCard user={session?.user} />
-			<Image
-				src={"/customers/ibn_profile.png"}
-				width={200}
-				height={200}
-				alt='texting image'
-				className='w-12 h-12 rounded-full'
-			/>
 		</div>
 	);
 };

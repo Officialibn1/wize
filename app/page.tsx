@@ -2,11 +2,8 @@ import Link from "next/link";
 
 const Page = () => {
 	return (
-		<main>
-			<h1 className='text3xl'>Hello World!!</h1>
-			<br />
-			<br />
-			<Link href={"/dashboard"}>dashboard</Link>
+		<main className='outline w-full'>
+			<h1 className='text-3xl my-10 text-center'>Testing Dark Theme</h1>
 		</main>
 	);
 };
