@@ -14,6 +14,7 @@
 		"autoprefixer": "10.4.15",
 		"bcrypt": "^5.1.1",
 		"clsx": "^2.0.0",
+		"mongoose": "^8.0.1",
 		"next": "^13.4.10",
 		"next-auth": "^4.24.5",
 		"postcss": "8.4.31",

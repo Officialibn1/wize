@@ -1,11 +1,17 @@
+"use client";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
 import "@/app/components/styles/LoginForm.css";
 
 const LoginForm = () => {
+	const [name, setName] = useState("");
+	const [password, setPassword] = useState("");
+	const [error, setError] = useState("");
 	return (
 		<form className='formElement'>
-			<legend>Account Login</legend>
+			<legend>Wize</legend>
+
+			<h2>Account Login</h2>
 
 			<label>
 				<span>Email / Username</span>
@@ -39,6 +45,7 @@ const LoginForm = () => {
 			</div>
 
 			<button>Login</button>
+			{error && <h3 className='error'>{error}</h3>}
 			<p>
 				Don&apos;t have an account? <Link href={"/signup"}>Sign Up</Link>
 			</p>

@@ -3,9 +3,12 @@
 }
 
 .formElement legend {
-	@apply text-3xl text-center mb-5;
+	@apply text-5xl text-center font-bold;
+	color: hsl(224 71.4% 4.1%);
 }
-
+.formElement > h2 {
+	@apply text-xl text-center;
+}
 .formElement label {
 	@apply flex flex-col gap-2;
 }
@@ -26,10 +29,15 @@
 }
 
 .formElement label input[type="text"],
-[type="password"] {
+[type="password"],
+[type="email"] {
 	@apply rounded-lg bg-transparent;
 	border: 1px solid rgb(51 65 85);
 	outline: none;
+}
+
+.formElement h3.error {
+	@apply bg-red-300/70 text-red-900 w-fit p-1 px-2 rounded-lg;
 }
 
 .formElement > button {
