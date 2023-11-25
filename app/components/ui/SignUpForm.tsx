@@ -17,10 +17,39 @@ const SignUpForm = () => {
 
 		if (!firstName || !lastName || !email || !password || !confirmPassword) {
 			setError("All fields are required!");
+			return;
 		}
 
 		if (password !== confirmPassword) {
 			setError("Confirm Password does'nt match password!");
+			return;
+		}
+
+		try {
+			setIsLoading(true);
+			const res = await fetch("/api/signup", {
+				method: "POST",
+				headers: {
+					"Content-type": "application/json",
+				},
+				body: JSON.stringify({
+					firstName,
+					lastName,
+					email,
+					password,
+				}),
+			});
+
+			if (res.ok) {
+				const form = e.target as HTMLFormElement;
+				form.reset();
+			} else {
+				setError("Registeration failed!");
+				console.log("Registeration failed!");
+			}
+			setIsLoading(false);
+		} catch (error) {
+			console.log("Failed operation", error);
 		}
 	};
 	return (
