@@ -2,6 +2,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import "@/app/components/styles/LoginForm.css";
+import { useRouter } from "next/navigation";
 
 const SignUpForm = () => {
 	const [firstName, setFirstName] = useState("");
@@ -11,6 +12,8 @@ const SignUpForm = () => {
 	const [confirmPassword, setConfirmPassword] = useState("");
 	const [error, setError] = useState("");
 	const [isLoading, setIsLoading] = useState(false);
+
+	const router = useRouter();
 
 	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
@@ -43,14 +46,21 @@ const SignUpForm = () => {
 			if (res.ok) {
 				const form = e.target as HTMLFormElement;
 				form.reset();
+				router.push("/login");
 			} else {
 				setError("Registeration failed!");
 				console.log("Registeration failed!");
 			}
-			setIsLoading(false);
 		} catch (error) {
 			console.log("Failed operation", error);
+		} finally {
+			setError("");
 		}
+		setIsLoading(false);
+		setFirstName("");
+		setLastName("");
+		setPassword("");
+		setConfirmPassword("");
 	};
 	return (
 		<form
