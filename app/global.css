@@ -50,12 +50,12 @@
 }
 
 body {
-	@apply max-w-[1736px] mx-auto outline text-slate-200;
+	@apply max-w-[1736px] h-[100dvh] mx-auto outline text-slate-200 flex;
 	font-family: "Raleway", sans-serif;
 	background: hsl(var(--background));
 	/* color: hsl(var(--foreground)); */
 }
 
 .customContainer {
-	@apply px-3 md:px-5 w-full;
+	@apply px-3 md:px-5 w-full my-auto;
 }

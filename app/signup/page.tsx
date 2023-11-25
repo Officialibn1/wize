@@ -3,7 +3,7 @@ import SignUpForm from "../components/ui/SignUpForm";
 
 const LoginPage = async () => {
 	return (
-		<main className=' customContainer'>
+		<main className='customContainer'>
 			<div className='loginPage'>
 				<SignUpForm />
 			</div>

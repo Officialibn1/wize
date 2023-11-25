@@ -2,7 +2,6 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import "@/app/components/styles/LoginForm.css";
-import { useRouter } from "next/navigation";
 
 const SignUpForm = () => {
 	const [firstName, setFirstName] = useState("");
@@ -13,80 +12,17 @@ const SignUpForm = () => {
 	const [error, setError] = useState("");
 	const [isLoading, setIsLoading] = useState(false);
 
-	const router = useRouter();
-
 	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 
 		if (!firstName || !lastName || !email || !password || !confirmPassword) {
-			setError("All fields are required");
-			return;
+			setError("All fields are required!");
 		}
 
 		if (password !== confirmPassword) {
-			setError("Confirm Password does'nt match passowrd!");
-			return;
-		}
-
-		if (password === confirmPassword && password.length < 8) {
-			setError("Password must be more than 8 characters");
-			return;
-		}
-
-		try {
-			setIsLoading(true);
-			await new Promise((resolve) => setTimeout(resolve, 2000));
-
-			const existRes = await fetch("api/userExist", {
-				method: "POST",
-				headers: {
-					"Content-Type": "application/json",
-				},
-				body: JSON.stringify({ email }),
-			});
-
-			const { user } = await existRes.json();
-
-			if (user) {
-				setError("Email already taken!");
-				return;
-			}
-
-			const res = await fetch("api/signup", {
-				method: "POST",
-				headers: {
-					"Content-Type": "application/json",
-				},
-				body: JSON.stringify({
-					firstName,
-					lastName,
-					email,
-					password,
-				}),
-			});
-
-			if (res.ok) {
-				const form: HTMLFormElement = e.target as HTMLFormElement;
-				form.reset();
-				setFirstName("");
-				setLastName("");
-				setEmail("");
-				setPassword("");
-				setConfirmPassword("");
-				setError("");
-				router.push("/login");
-			} else {
-				setError("Registeration Failed");
-				return;
-			}
-		} catch (error) {
-			console.log("Error during registeration", error);
-		} finally {
-			// Resetting all states
-			setIsLoading(false);
+			setError("Confirm Password does'nt match password!");
 		}
 	};
-
 	return (
 		<form
 			className='formElement'
@@ -146,11 +82,10 @@ const SignUpForm = () => {
 			</label>
 
 			<button disabled={isLoading}>
-				{isLoading ? "Signing Up. . ." : "Signup"}
+				{isLoading ? "Signing Up. . ." : "SignUp"}
 			</button>
 
 			{error && <h3 className='error'>{error}</h3>}
-
 			<p>
 				Have an account? <Link href={"/login"}>Login</Link>
 			</p>
