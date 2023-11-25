@@ -4,8 +4,22 @@ import React, { useState } from "react";
 import "@/app/components/styles/LoginForm.css";
 
 const LoginForm = () => {
+	const [email, setEmail] = useState("");
+	const [password, setPassword] = useState("");
+	const [error, setError] = useState("");
+	const [isLoading, setIsLoading] = useState(false);
+
+	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+		e.preventDefault();
+
+		if (!email || !password) {
+			setError("All fields are required!");
+		}
+	};
 	return (
-		<form className='formElement'>
+		<form
+			className='formElement'
+			onSubmit={(e) => handleSubmit(e)}>
 			<legend>Wize</legend>
 
 			<h2>Account Login</h2>
@@ -16,6 +30,7 @@ const LoginForm = () => {
 					type='text'
 					id='username'
 					placeholder='Enter your email'
+					onChange={(e) => setEmail(e.target.value)}
 				/>
 			</label>
 
@@ -25,6 +40,7 @@ const LoginForm = () => {
 					type='password'
 					id='password'
 					placeholder='Enter your password'
+					onChange={(e) => setPassword(e.target.value)}
 				/>
 			</label>
 
@@ -41,8 +57,11 @@ const LoginForm = () => {
 				<p>Forgot Password?</p>
 			</div>
 
-			<button>Login</button>
-			<h3 className='error'>{"error"}</h3>
+			<button disabled={isLoading}>
+				{isLoading ? "Logging In. . ." : "Login"}
+			</button>
+
+			{error && <h3 className='error'>{error}</h3>}
 
 			<p>
 				Don&apos;t have an account? <Link href={"/signup"}>Sign Up</Link>
