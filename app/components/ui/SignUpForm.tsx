@@ -30,10 +30,28 @@ const SignUpForm = () => {
 
 		try {
 			setIsLoading(true);
+
+			const existRes = await fetch("/api/userexist", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({ email }),
+			});
+
+			const { user } = await existRes.json();
+
+			console.log("User:", user);
+
+			if (user) {
+				setError("Email has already been used");
+				return;
+			}
+
 			const res = await fetch("/api/signup", {
 				method: "POST",
 				headers: {
-					"Content-type": "application/json",
+					"Content-Type": "application/json",
 				},
 				body: JSON.stringify({
 					firstName,
@@ -77,6 +95,7 @@ const SignUpForm = () => {
 					id='lirstname'
 					placeholder='Enter your Firstname'
 					onChange={(e) => setFirstName(e.target.value)}
+					disabled={isLoading}
 				/>
 			</label>
 
@@ -87,6 +106,7 @@ const SignUpForm = () => {
 					id='lastname'
 					placeholder='Enter your Lastname'
 					onChange={(e) => setLastName(e.target.value)}
+					disabled={isLoading}
 				/>
 			</label>
 
@@ -97,6 +117,7 @@ const SignUpForm = () => {
 					id='email'
 					placeholder='Enter your Email'
 					onChange={(e) => setEmail(e.target.value)}
+					disabled={isLoading}
 				/>
 			</label>
 
@@ -107,6 +128,7 @@ const SignUpForm = () => {
 					id='password'
 					placeholder='Create a password'
 					onChange={(e) => setPassword(e.target.value)}
+					disabled={isLoading}
 				/>
 			</label>
 
@@ -117,6 +139,7 @@ const SignUpForm = () => {
 					id='confirmPassword'
 					placeholder='Confirm your password'
 					onChange={(e) => setConfirmPassword(e.target.value)}
+					disabled={isLoading}
 				/>
 			</label>
 
