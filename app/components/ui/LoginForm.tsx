@@ -4,9 +4,6 @@ import React, { useState } from "react";
 import "@/app/components/styles/LoginForm.css";
 
 const LoginForm = () => {
-	const [name, setName] = useState("");
-	const [password, setPassword] = useState("");
-	const [error, setError] = useState("");
 	return (
 		<form className='formElement'>
 			<legend>Wize</legend>
@@ -14,11 +11,11 @@ const LoginForm = () => {
 			<h2>Account Login</h2>
 
 			<label>
-				<span>Email / Username</span>
+				<span>Email</span>
 				<input
 					type='text'
-					id='name'
-					placeholder='Enter your name / username'
+					id='username'
+					placeholder='Enter your email'
 				/>
 			</label>
 
@@ -45,7 +42,8 @@ const LoginForm = () => {
 			</div>
 
 			<button>Login</button>
-			{error && <h3 className='error'>{error}</h3>}
+			<h3 className='error'>{"error"}</h3>
+
 			<p>
 				Don&apos;t have an account? <Link href={"/signup"}>Sign Up</Link>
 			</p>

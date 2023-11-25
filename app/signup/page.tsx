@@ -1,8 +1,7 @@
 import React from "react";
 import SignUpForm from "../components/ui/SignUpForm";
-import "@/app/components/styles/LoginPage.css";
 
-const LoginPage = () => {
+const LoginPage = async () => {
 	return (
 		<main className=' customContainer'>
 			<div className='loginPage'>

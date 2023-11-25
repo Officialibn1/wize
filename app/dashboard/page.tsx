@@ -1,15 +1,15 @@
 "use client";
 import React from "react";
-import { useSession } from "next-auth/react";
 import UserCard from "../components/ui/UserCard";
-import Image from "next/image";
 
 const DashboardPage = () => {
-	const { data: session } = useSession();
 	return (
 		<div className='flex flex-col gap-5 items-center'>
 			DashboardPage
-			<UserCard user={session?.user} />
+			<UserCard />
+			<button className='my-5 p-3 rounded-xl bg-slate-700 text-slate-900 font-bold hover:bg-slate-800'>
+				Logout
+			</button>
 		</div>
 	);
 };

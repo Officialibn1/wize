@@ -9,13 +9,11 @@ type User =
 	  }
 	| undefined;
 
-const UserCard = ({ user }: { user: User }) => {
-	console.log(user?.image);
-
+const UserCard = () => {
 	return (
 		<div className=' p-5 w-fit outline mx-auto flex flex-col gap-5 text-center'>
 			<div className='w-18 h-18 rounded-full mx-auto outline'>
-				<Image
+				{/* <Image
 					src={
 						user?.image === undefined
 							? "/customers/ibn_profile.png"
@@ -25,11 +23,11 @@ const UserCard = ({ user }: { user: User }) => {
 					height={400}
 					alt={user?.email as string}
 					className='w-24 h-24 rounded-full'
-				/>
+				/> */}
 			</div>
-			<h1 className='text-3xl'>{user?.name}</h1>
+			{/* <h1 className='text-3xl'>{user?.name}</h1> */}
 
-			<p>{user?.email}</p>
+			{/* <p>{user?.email}</p> */}
 		</div>
 	);
 };

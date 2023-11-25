@@ -2,6 +2,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import "@/app/components/styles/LoginForm.css";
+import { useRouter } from "next/navigation";
 
 const SignUpForm = () => {
 	const [firstName, setFirstName] = useState("");
@@ -10,6 +11,9 @@ const SignUpForm = () => {
 	const [password, setPassword] = useState("");
 	const [confirmPassword, setConfirmPassword] = useState("");
 	const [error, setError] = useState("");
+	const [isLoading, setIsLoading] = useState(false);
+
+	const router = useRouter();
 
 	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
@@ -30,6 +34,24 @@ const SignUpForm = () => {
 		}
 
 		try {
+			setIsLoading(true);
+			await new Promise((resolve) => setTimeout(resolve, 2000));
+
+			const existRes = await fetch("api/userExist", {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+				},
+				body: JSON.stringify({ email }),
+			});
+
+			const { user } = await existRes.json();
+
+			if (user) {
+				setError("Email already taken!");
+				return;
+			}
+
 			const res = await fetch("api/signup", {
 				method: "POST",
 				headers: {
@@ -46,12 +68,22 @@ const SignUpForm = () => {
 			if (res.ok) {
 				const form: HTMLFormElement = e.target as HTMLFormElement;
 				form.reset();
+				setFirstName("");
+				setLastName("");
+				setEmail("");
+				setPassword("");
+				setConfirmPassword("");
+				setError("");
+				router.push("/login");
 			} else {
 				setError("Registeration Failed");
 				return;
 			}
 		} catch (error) {
 			console.log("Error during registeration", error);
+		} finally {
+			// Resetting all states
+			setIsLoading(false);
 		}
 	};
 
@@ -113,7 +145,9 @@ const SignUpForm = () => {
 				/>
 			</label>
 
-			<button>Signup</button>
+			<button disabled={isLoading}>
+				{isLoading ? "Signing Up. . ." : "Signup"}
+			</button>
 
 			{error && <h3 className='error'>{error}</h3>}
 
