@@ -12,7 +12,7 @@ export const GET = async (req: Request) => {
 		return NextResponse.json({ message: "fetched user", user });
 	} catch (e) {
 		const error = e as Error;
-		console.log(error.cause);
+		// console.log(error.cause);
 		return NextResponse.json({ message: "fetched failed", error });
 	}
 };
