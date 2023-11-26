@@ -31,6 +31,7 @@ const SignUpForm = () => {
 		try {
 			setIsLoading(true);
 
+			// fetching data from the user exist API to check if the user signing up already exist
 			const existRes = await fetch("/api/userexist", {
 				method: "POST",
 				headers: {
@@ -44,10 +45,13 @@ const SignUpForm = () => {
 			console.log("User:", user);
 
 			if (user) {
-				setError("Email has already been used");
+				setIsLoading(false);
+				setError("This email have already been used!");
+
 				return;
 			}
 
+			// Signing up a new user from the signup API
 			const res = await fetch("/api/signup", {
 				method: "POST",
 				headers: {
@@ -71,14 +75,13 @@ const SignUpForm = () => {
 			}
 		} catch (error) {
 			console.log("Failed operation", error);
-		} finally {
-			setError("");
 		}
 		setIsLoading(false);
 		setFirstName("");
 		setLastName("");
 		setPassword("");
 		setConfirmPassword("");
+		setError("");
 	};
 	return (
 		<form
