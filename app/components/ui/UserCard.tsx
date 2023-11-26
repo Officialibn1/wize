@@ -1,3 +1,5 @@
+"use client";
+import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
 import React from "react";
 
@@ -10,26 +12,13 @@ type User =
 	  }
 	| undefined;
 
-const fetchUserData = async (userEmail: string) => {
-	const res = await fetch("/api/fetchuser", {
-		method: "POST",
-		headers: {
-			"content-type": "application/json",
-		},
-		body: JSON.stringify({
-			userEmail,
-		}),
-	});
-};
+const UserCard = () => {
+	const { data: session } = useSession();
 
-const UserCard = async ({ user }: { user: User }) => {
-	const userEmail = user?.email;
-	const userData = await fetchUserData(userEmail as string);
-
-	console.log(userData);
+	const user: User = session?.user;
 
 	return (
-		<div className=' p-5 w-fit outline mx-auto flex flex-col gap-5 text-center'>
+		<div className=' p-5 w-fit outline mx-auto flex flex-col gap-5 text-center my-10'>
 			<div className='w-18 h-18 rounded-full mx-auto outline'>
 				<Image
 					src={
@@ -47,6 +36,12 @@ const UserCard = async ({ user }: { user: User }) => {
 			<h1 className='text-2xl'>{user?.lastName}</h1>
 
 			<p>{user?.email}</p>
+
+			<button
+				className='my-5 p-3 rounded-xl bg-slate-700 text-slate-900 font-bold hover:bg-slate-800'
+				onClick={() => signOut()}>
+				Logout
+			</button>
 		</div>
 	);
 };

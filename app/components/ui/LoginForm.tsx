@@ -58,6 +58,7 @@ const LoginForm = () => {
 					id='username'
 					placeholder='Enter your email'
 					onChange={(e) => setEmail(e.target.value)}
+					disabled={isLoading}
 				/>
 			</label>
 
@@ -68,6 +69,7 @@ const LoginForm = () => {
 					id='password'
 					placeholder='Enter your password'
 					onChange={(e) => setPassword(e.target.value)}
+					disabled={isLoading}
 				/>
 			</label>
 
@@ -77,6 +79,7 @@ const LoginForm = () => {
 						type='checkbox'
 						name='rememberMe'
 						id='rememberMe'
+						disabled={isLoading}
 					/>
 					<span>Remember Me</span>
 				</label>
