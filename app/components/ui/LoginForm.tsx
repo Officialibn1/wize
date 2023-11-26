@@ -2,6 +2,8 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import "@/app/components/styles/LoginForm.css";
+import { signIn } from "next-auth/react";
+import { useRouter } from "next/navigation";
 
 const LoginForm = () => {
 	const [email, setEmail] = useState("");
@@ -9,11 +11,30 @@ const LoginForm = () => {
 	const [error, setError] = useState("");
 	const [isLoading, setIsLoading] = useState(false);
 
+	const router = useRouter();
+
 	const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 
 		if (!email || !password) {
 			setError("All fields are required!");
+		}
+		try {
+			const res = await signIn("credentials", {
+				email,
+				password,
+				redirect: false,
+			});
+
+			if (res?.error) {
+				setError("Invalid Credentials");
+				return;
+			}
+
+			router.replace("dashboard");
+		} catch (e) {
+			const error = e as Error;
+			console.log(error.message);
 		}
 	};
 	return (

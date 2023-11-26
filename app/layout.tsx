@@ -1,9 +1,12 @@
 import "@/app/global.css";
+import AuthProviders from "./providers";
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
 	return (
 		<html lang='en'>
-			<body>{children}</body>
+			<body>
+				<AuthProviders>{children}</AuthProviders>
+			</body>
 		</html>
 	);
 };
