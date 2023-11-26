@@ -18,8 +18,10 @@ const LoginForm = () => {
 
 		if (!email || !password) {
 			setError("All fields are required!");
+			return;
 		}
 		try {
+			setIsLoading(true);
 			const res = await signIn("credentials", {
 				email,
 				password,
@@ -28,6 +30,8 @@ const LoginForm = () => {
 
 			if (res?.error) {
 				setError("Invalid Credentials");
+				setIsLoading(false);
+
 				return;
 			}
 
@@ -36,6 +40,8 @@ const LoginForm = () => {
 			const error = e as Error;
 			console.log(error.message);
 		}
+
+		setIsLoading(false);
 	};
 	return (
 		<form
