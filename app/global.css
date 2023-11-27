@@ -50,7 +50,7 @@
 }
 
 body {
-	@apply max-w-[1736px] h-[100dvh] mx-auto outline text-slate-200 flex;
+	@apply max-w-[1736px] h-[100dvh] mx-auto outline text-slate-300 flex;
 	font-family: "Raleway", sans-serif;
 	background: hsl(var(--background));
 	/* color: hsl(var(--foreground)); */
