@@ -1,5 +1,5 @@
 nav {
-	@apply flex justify-end lg:justify-between px-5 py-3 outline bg-slate-900 gap-5 relative;
+	@apply flex justify-end lg:justify-between px-5 py-3 bg-slate-900 gap-5 relative;
 }
 
 .navLogo {

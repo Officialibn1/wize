@@ -1,0 +1,5 @@
+/* hero styles  */
+.heroSection {
+	@apply outline h-[30vh];
+	background-image: url("/wizehero.jpeg");
+}
