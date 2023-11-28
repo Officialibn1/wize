@@ -1,5 +1,5 @@
 nav {
-	@apply flex justify-end lg:justify-between px-5 py-5 lg:px-10 bg-slate-900 gap-5 relative;
+	@apply flex justify-end lg:justify-between px-5 py-5 lg:px-10 bg-slate-900 gap-5 relative z-20;
 }
 
 .navLogo {
@@ -84,7 +84,7 @@ nav {
 
 /* navlinks for mobile and tablet view */
 .mobileLinks {
-	@apply absolute top-0 bg-slate-900 px-5 pt-3 pb-5 flex flex-col gap-5 lg:hidden md:w-56 duration-500 ease-in-out;
+	@apply absolute top-0 bg-slate-900 px-5 py-5 flex flex-col gap-5 lg:hidden md:w-56 duration-500 ease-in-out;
 }
 
 /* mobile view nav buttons */

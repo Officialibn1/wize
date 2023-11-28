@@ -1,0 +1,44 @@
+/* margin index section container */
+.marginIndex {
+	@apply w-full flex justify-center my-10 px-5;
+}
+
+/* the inner div wrapping all the contents */
+.marginIndex > div {
+	@apply flex flex-col gap-10 lg:flex-row md:items-center lg:py-5;
+}
+
+/* the image container */
+.marginIndex > div .marginImage {
+	@apply md:w-2/3 xl:w-1/2;
+}
+
+/* the image in the image container */
+.marginIndex > div .marginImage img {
+	@apply w-full;
+}
+
+/* the container wrapping all the text and button in the marginindex section */
+.marginIndex > div .marginText {
+	@apply flex flex-col gap-1 md:w-2/3;
+}
+
+/* heading styles in the margintext container */
+.marginIndex > div .marginText h1 {
+	@apply text-3xl font-medium;
+}
+
+/* paragraph tag styles in the margintext container */
+.marginIndex > div .marginText p {
+	@apply text-lg font-light;
+}
+
+/* ul tag styles in the margintext container */
+.marginIndex > div .marginText ul {
+	@apply list-disc text-base font-normal mt-3;
+}
+
+.marginIndex > div .marginText button {
+	@apply px-5 py-3 rounded-lg mt-5 md:w-fit duration-200 ease-in-out lg:hover:bg-slate-300 lg:hover:text-[#030712];
+	border: 1px solid rgb(203 213 225);
+}

@@ -14,9 +14,9 @@ const HeroSection = () => {
 					and attractive margin rates
 				</p>
 
-				<button>
-					<Link href={"/signup"}>Open Account</Link>
-				</button>
+				<Link href={"/signup"}>
+					<button>Open Account</button>
+				</Link>
 			</div>
 		</div>
 	);

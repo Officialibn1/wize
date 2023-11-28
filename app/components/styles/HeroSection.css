@@ -18,7 +18,7 @@
 }
 
 .heroText {
-	@apply relative z-10 py-10 px-3 md:px-5 flex flex-col gap-2 md:w-2/3 lg:w-1/2 ml-32 xl:w-1/3;
+	@apply relative z-10 py-10 px-5 flex flex-col gap-2 md:w-2/3 lg:w-1/2 md:ml-32 xl:w-1/3;
 }
 
 .heroText > h1 {
@@ -29,7 +29,7 @@
 	@apply text-lg font-light;
 }
 
-.heroText > button {
+.heroText > a button {
 	@apply px-5 py-3 rounded-lg mt-10 md:w-fit duration-200 ease-in-out lg:hover:bg-slate-300 lg:hover:text-[#030712];
 	border: 1px solid rgb(203 213 225);
 }
