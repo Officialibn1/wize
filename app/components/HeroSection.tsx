@@ -5,7 +5,8 @@ import Link from "next/link";
 const HeroSection = () => {
 	return (
 		<div className='heroSection'>
-			<div>
+			<div className='gradient-overlay'></div>
+			<div className='heroText'>
 				<h1>A Futures Broker as Sophisticated as You</h1>
 
 				<p>

@@ -1,5 +1,35 @@
 /* hero styles  */
 .heroSection {
-	@apply outline h-[30vh];
-	background-image: url("/wizehero.jpeg");
+	@apply relative;
+	background-image: url("/pexels-marcus-18033178.jpg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.gradient-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(80deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5));
+	backdrop-filter: blur(5px);
+}
+
+.heroText {
+	@apply relative z-10 py-10 px-3 md:px-5 flex flex-col gap-2 md:w-2/3 lg:w-1/2 ml-32 xl:w-1/3;
+}
+
+.heroText > h1 {
+	@apply text-4xl font-bold lg:font-extrabold lg:text-5xl;
+}
+
+.heroText > p {
+	@apply text-lg font-light;
+}
+
+.heroText > button {
+	@apply px-5 py-3 rounded-lg mt-10 md:w-fit duration-200 ease-in-out lg:hover:bg-slate-300 lg:hover:text-[#030712];
+	border: 1px solid rgb(203 213 225);
 }

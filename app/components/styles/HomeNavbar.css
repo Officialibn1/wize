@@ -1,5 +1,5 @@
 nav {
-	@apply flex justify-end lg:justify-between px-5 py-3 bg-slate-900 gap-5 relative;
+	@apply flex justify-end lg:justify-between px-5 py-5 lg:px-10 bg-slate-900 gap-5 relative;
 }
 
 .navLogo {
@@ -7,8 +7,8 @@ nav {
 }
 
 .navLogo h1 {
-	@apply text-4xl font-bold;
-	color: hsl(224 71.4% 4.1%);
+	@apply text-4xl font-bold text-slate-300;
+	/* color: hsl(224 71.4% 4.1%); */
 }
 
 .desktopLinks {
