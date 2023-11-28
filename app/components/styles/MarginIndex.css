@@ -1,6 +1,6 @@
 /* margin index section container */
 .marginIndex {
-	@apply w-full flex justify-center my-10 px-5;
+	@apply w-full flex justify-center my-24 px-5;
 }
 
 /* the inner div wrapping all the contents */
@@ -38,6 +38,7 @@
 	@apply list-disc text-base font-normal mt-3;
 }
 
+/* link button styles */
 .marginIndex > div .marginText button {
 	@apply px-5 py-3 rounded-lg mt-5 md:w-fit duration-200 ease-in-out lg:hover:bg-slate-300 lg:hover:text-[#030712];
 	border: 1px solid rgb(203 213 225);

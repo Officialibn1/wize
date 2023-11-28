@@ -7,7 +7,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
 		<html lang='en'>
 			<body>
 				<AuthProviders>
-					<main className='w-full'>
+					<main className='w-full outline'>
 						<HomeNavbar />
 						{children}
 					</main>
