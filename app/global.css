@@ -57,7 +57,7 @@ body {
 }
 
 .customContainer {
-	@apply px-3 md:px-5 w-full my-auto;
+	@apply px-3 w-full h-screen flex items-center justify-center;
 }
 
 .wizeButton {

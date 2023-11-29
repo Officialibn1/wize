@@ -10,11 +10,11 @@ const LoginPage = async () => {
 		redirect("/dashboard");
 	}
 	return (
-		<main className='customContainer'>
+		<div className='customContainer'>
 			<div className='loginPage'>
 				<SignUpForm />
 			</div>
-		</main>
+		</div>
 	);
 };
 
