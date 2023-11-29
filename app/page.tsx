@@ -2,6 +2,7 @@ import Link from "next/link";
 import HomeNavbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import MarginIndex from "./components/MarginIndex";
+import NewAccount from "./components/NewAccount";
 
 const Page = () => {
 	return (
@@ -11,6 +12,9 @@ const Page = () => {
 
 			{/* Margin  futures index section */}
 			<MarginIndex />
+
+			{/* NewAccount section */}
+			<NewAccount />
 		</section>
 	);
 };

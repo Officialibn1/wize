@@ -1,0 +1,21 @@
+/* new account secction container */
+.newAccount {
+	@apply outline px-5 py-10;
+}
+
+.newAccount > div {
+	@apply flex flex-col gap-3;
+}
+
+.newAccount h1 {
+	@apply text-3xl font-semibold;
+}
+
+.newAccount p {
+	@apply text-lg font-light;
+}
+
+.newAccount > div > a button {
+	@apply px-5 py-3 rounded-lg mt-5 md:w-fit duration-200 ease-in-out lg:hover:bg-slate-300 lg:hover:text-[#030712];
+	border: 1px solid rgb(203 213 225);
+}
