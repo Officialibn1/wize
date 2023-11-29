@@ -1,0 +1,29 @@
+/* services section main container */
+.servicesSection {
+	@apply my-24 lg:my-44;
+}
+
+/* services section inner div */
+.servicesSection > .servicesSectionContent {
+	@apply flex flex-col px-5 gap-10 md:flex-row lg:w-3/4 mx-auto xl:w-2/3;
+}
+
+/* services section content div styles */
+.servicesSectionContent > div {
+	@apply flex flex-col gap-3;
+}
+
+/* styling for the heading tags in the inner divs */
+.servicesSectionContent > div h1 {
+	@apply text-3xl font-semibold;
+}
+
+/* styling for the paragraph tags in the inner divs */
+.servicesSectionContent > div p {
+	@apply text-base font-light lg:text-lg;
+}
+
+/* button styles */
+.servicesSectionContent > div > a {
+	@apply mt-auto;
+}

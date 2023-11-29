@@ -60,5 +60,7 @@ body {
 	@apply px-3 md:px-5 w-full my-auto;
 }
 
-.contentContainer {
+.wizeButton {
+	@apply px-5 py-3 rounded-lg mt-5 md:w-fit duration-200 ease-in-out lg:hover:bg-slate-300 lg:hover:text-[#030712];
+	border: 1px solid rgb(203 213 225);
 }

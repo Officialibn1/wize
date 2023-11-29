@@ -3,6 +3,7 @@ import HomeNavbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import MarginIndex from "./components/MarginIndex";
 import NewAccount from "./components/NewAccount";
+import ServicesSection from "./components/ServicesSection";
 
 const Page = () => {
 	return (
@@ -15,6 +16,9 @@ const Page = () => {
 
 			{/* NewAccount section */}
 			<NewAccount />
+
+			{/* Services Section */}
+			<ServicesSection />
 		</section>
 	);
 };
