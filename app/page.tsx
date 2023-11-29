@@ -1,4 +1,3 @@
-import Link from "next/link";
 import HomeNavbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import MarginIndex from "./components/MarginIndex";
@@ -8,6 +7,8 @@ import ServicesSection from "./components/ServicesSection";
 const Page = () => {
 	return (
 		<section>
+			{/* navigation bar */}
+			<HomeNavbar />
 			{/* hero component */}
 			<HeroSection />
 
