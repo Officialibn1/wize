@@ -10,7 +10,15 @@ export const authOptions = {
 		CredentialsProvider({
 			name: "Credentials",
 			credentials: {},
-			async authorize(credentials, req) {
+			// @ts-ignore
+			async authorize(
+				credentials: { email: string; password: string } | undefined,
+				req,
+			) {
+				if (!credentials) {
+					return null;
+				}
+
 				const { email, password } = credentials;
 				try {
 					await connectMongoDB();
