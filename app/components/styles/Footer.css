@@ -1,0 +1,38 @@
+footer {
+	@apply flex flex-col items-center gap-10 py-20;
+	background: linear-gradient(
+		125deg,
+		rgba(14, 164, 233, 0.6),
+		rgba(68, 56, 202, 0.8),
+		rgba(14, 164, 233, 0.4)
+	);
+}
+/* footer logo styles */
+footer .footerLogo {
+	@apply flex flex-col items-center text-center;
+}
+
+/* wize logo heading text styles */
+footer .footerLogo h1 {
+	@apply text-6xl font-bold;
+}
+
+/* wize logo paragraph text styles */
+footer .footerLogo p {
+	@apply text-sm font-extralight;
+}
+
+/* footer text for copyright styles */
+footer > p {
+	@apply font-light;
+}
+
+/* footer social icons container */
+footer .socialIcons {
+	@apply flex gap-4;
+}
+
+/* footer social icon span container */
+footer .socialIcons a {
+	@apply p-2 rounded-xl text-xl bg-slate-900 lg:hover:bg-slate-950/40 duration-200 ease-in-out;
+}

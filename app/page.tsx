@@ -3,6 +3,7 @@ import HeroSection from "./components/HeroSection";
 import MarginIndex from "./components/MarginIndex";
 import NewAccount from "./components/NewAccount";
 import ServicesSection from "./components/ServicesSection";
+import Footer from "./components/Footer";
 
 const Page = () => {
 	return (
@@ -20,6 +21,9 @@ const Page = () => {
 
 			{/* Services Section */}
 			<ServicesSection />
+
+			{/* footer section */}
+			<Footer />
 		</section>
 	);
 };

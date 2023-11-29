@@ -1,5 +1,11 @@
 nav {
-	@apply flex justify-end lg:justify-between px-5 py-5 lg:px-10 bg-slate-900 gap-5 relative z-20;
+	@apply flex justify-end lg:justify-between px-5 py-5 lg:px-10  gap-5 relative z-20;
+	background: linear-gradient(
+		125deg,
+		rgba(14, 164, 233, 0.6),
+		rgba(68, 56, 202, 0.8),
+		rgba(14, 164, 233, 0.4)
+	);
 }
 
 .navLogo {
@@ -22,14 +28,14 @@ nav {
 /* navlinks styles */
 .desktopLinks ul li > a,
 .mobileLinks ul li > a {
-	@apply text-base font-light ease-in-out duration-300 px-2 py-2 lg:hover:bg-slate-800;
+	@apply text-base font-light ease-in-out duration-200 px-2 py-2 lg:hover:bg-slate-950/25;
 	border-radius: 0.5rem;
 }
 
 /* active navlink style */
 .desktopLinks ul li > a.active,
 .mobileLinks ul li > a.active {
-	@apply text-[#030712] bg-slate-800 font-semibold;
+	@apply bg-slate-950/40 font-semibold;
 }
 
 /* navlink hover effect  on large screen*/
@@ -61,15 +67,15 @@ nav {
 }
 
 /* sign in styles */
-.navButtons a:last-child,
+/* .navButtons a:last-child,
 .mobileNavButtons a:last-child {
 	@apply bg-slate-800 text-[#030712] lg:hover:bg-[#030712] lg:hover:text-slate-300;
-}
+} */
 
 /* register styles */
-.navButtons a:first-child,
-.mobileNavButtons a:first-child {
-	@apply bg-[#030712] lg:hover:bg-slate-800 lg:hover:text-[#030712];
+.navButtons a,
+.mobileNavButtons a {
+	@apply bg-[#030712] lg:hover:bg-slate-950/40;
 }
 
 /* toggle button for mobile and tablet view */
