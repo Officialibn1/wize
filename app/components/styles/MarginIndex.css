@@ -1,6 +1,6 @@
 /* margin index section container */
 .marginIndex {
-	@apply w-full flex justify-center my-24 px-5;
+	@apply w-full flex justify-center my-24 lg:my-44 px-5;
 }
 
 /* the inner div wrapping all the contents */
