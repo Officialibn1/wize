@@ -4,6 +4,7 @@ import MarginIndex from "./components/MarginIndex";
 import NewAccount from "./components/NewAccount";
 import ServicesSection from "./components/ServicesSection";
 import Footer from "./components/Footer";
+import Disclaimer from "./components/Disclaimer";
 
 const Page = () => {
 	return (
@@ -24,6 +25,9 @@ const Page = () => {
 
 			{/* footer section */}
 			<Footer />
+
+			{/* Disclaimer section */}
+			<Disclaimer />
 		</section>
 	);
 };

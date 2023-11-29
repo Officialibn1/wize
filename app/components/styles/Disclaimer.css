@@ -1,0 +1,11 @@
+.disclaimer {
+	@apply px-5 py-20 font-extralight md:w-2/3 mx-auto;
+}
+
+.disclaimer p {
+	@apply my-5;
+}
+
+.disclaimer span {
+	@apply text-violet-400;
+}
