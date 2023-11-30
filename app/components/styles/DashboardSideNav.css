@@ -1,0 +1,53 @@
+.dashboardSideNav {
+	@apply flex flex-col gap-10 p-2 lg:p-5 col-span-2 items-center;
+}
+
+/* side nav logo container styles */
+.sideNavLogo {
+	@apply text-center;
+}
+
+/* logo link styles */
+.sideNavLogo a {
+	@apply lg:hover:text-slate-500 duration-300 ease-in-out;
+}
+
+/* logo text styles */
+.sideNavLogo h1 {
+	@apply text-3xl lg:text-5xl font-bold;
+}
+
+/* sidenav links styles */
+.sideNavLinks {
+	@apply h-full;
+}
+
+/* sidenav links list tag styles */
+.sideNavLinks ul {
+	@apply lg:p-2 flex flex-col gap-5 h-full;
+}
+
+/* individual list item in the list */
+.sideNavLinks ul li {
+	/* @apply outline; */
+}
+
+.sideNavLinks ul li:last-child {
+	@apply mt-auto;
+}
+
+/* individaul link in the sidenav */
+.sideNavLinks ul li a {
+	@apply flex gap-1 items-center justify-center w-12 h-12 bg-slate-900/50 lg:w-auto lg:h-auto duration-300 ease-in-out lg:justify-start lg:p-2 lg:hover:bg-slate-900;
+	border-radius: 0.5rem;
+}
+
+/* individaul link span styles in the sidenav */
+.sideNavLinks ul li a span {
+	@apply hidden lg:block font-medium;
+}
+
+/* individaul link icon styles in the sidenav */
+.sideNavLinks ul li a svg {
+	@apply text-3xl;
+}

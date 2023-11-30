@@ -1,9 +1,11 @@
 import React from "react";
-import UserCard from "../components/ui/UserCard";
+import "@/app/components/styles/DashboardPage.css";
 
 const DashboardPage = async () => {
 	return (
-		<div className='flex flex-col gap-5 items-center outline w-full'></div>
+		<div className='dashboardPage'>
+			<h1 className='text-3xl'>Dashboard Page</h1>
+		</div>
 	);
 };
 
