@@ -46,4 +46,11 @@ export const authOptions = {
 	pages: {
 		signIn: "/login",
 	},
+	callbacks: {
+		async session({ session, token, user }) {
+			// session.user.id = token?.id
+
+			return session;
+		},
+	},
 } satisfies NextAuthOptions;

@@ -4,9 +4,15 @@ import React, { useState } from "react";
 import "@/app/components/styles/HomeNavbar.css";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdClose } from "react-icons/io";
+import { useSession } from "next-auth/react";
 
 const HomeNavbar = () => {
 	const [navState, setNavState] = useState(false);
+
+	// use server session instance
+	const { data: session, status } = useSession();
+
+	console.log(session?.user);
 
 	const toggler = () => {
 		setNavState((prev) => !prev);
@@ -48,10 +54,16 @@ const HomeNavbar = () => {
 			</div>
 
 			{/* register and signin button for laptop and larger screen */}
-			<div className='navButtons'>
-				<Link href={"/login"}>Sign in</Link>
-				<Link href={"/signup"}>Register</Link>
-			</div>
+			{status !== "authenticated" ? (
+				<div className='navButtons'>
+					<Link href={"/login"}>Sign in</Link>
+					<Link href={"/signup"}>Register</Link>
+				</div>
+			) : (
+				<div className='navButtons'>
+					<Link href={"/dashboard"}>Dashboard</Link>
+				</div>
+			)}
 
 			{/* toggle button for mobile and tablet screen */}
 			<div className='toggleBtn'>
@@ -113,18 +125,28 @@ const HomeNavbar = () => {
 					</li>
 				</ul>
 
-				<div className='mobileNavButtons'>
-					<Link
-						onClick={() => toggler()}
-						href={"/login"}>
-						Sign in
-					</Link>
-					<Link
-						onClick={() => toggler()}
-						href={"/signup"}>
-						Register
-					</Link>
-				</div>
+				{status !== "authenticated" ? (
+					<div className='mobileNavButtons'>
+						<Link
+							onClick={() => toggler()}
+							href={"/login"}>
+							Sign in
+						</Link>
+						<Link
+							onClick={() => toggler()}
+							href={"/signup"}>
+							Register
+						</Link>
+					</div>
+				) : (
+					<div className='mobileNavButtons'>
+						<Link
+							onClick={() => toggler()}
+							href={"/dashboard"}>
+							Dashboard
+						</Link>
+					</div>
+				)}
 			</div>
 		</nav>
 	);

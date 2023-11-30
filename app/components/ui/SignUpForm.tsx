@@ -87,7 +87,9 @@ const SignUpForm = () => {
 		<form
 			className='formElement'
 			onSubmit={(e) => handleSubmit(e)}>
-			<legend>Wize</legend>
+			<legend>
+				<Link href={"/"}>Wize</Link>
+			</legend>
 
 			<h2>Signup for an account</h2>
 

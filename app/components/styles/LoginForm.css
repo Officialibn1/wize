@@ -4,7 +4,13 @@
 
 .formElement legend {
 	@apply text-5xl text-center font-bold;
-	color: hsl(224 71.4% 4.1%);
+	color: rgb(3, 7, 18);
+	/* color: #03071299; */
+}
+
+/* hover effect for the home line */
+.formElement legend a {
+	@apply lg:hover:text-slate-600 duration-300 ease-in-out;
 }
 .formElement > h2 {
 	@apply text-xl text-center;

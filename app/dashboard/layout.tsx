@@ -1,7 +1,7 @@
 import React from "react";
 
 const DashboardLayout = ({ children }: { children: React.ReactNode }) => {
-	return <main className='w-full'>{children}</main>;
+	return <section className='w-full'>{children}</section>;
 };
 
 export default DashboardLayout;
