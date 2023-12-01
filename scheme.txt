@@ -1,0 +1,88 @@
+I need you to define a mongoose schema for the userdata, The schema should have the following fields,
+
+{
+    name,
+    required
+},
+{
+    email,
+    required
+},
+{
+    password,
+    required
+},
+{
+    username,
+    required
+},
+{
+    address: {
+        house number,
+        street,
+        state,
+        country,
+        postcode
+    }
+},
+{
+    accounts: [
+        deposit account: {
+            account name,
+            account number,
+            bank name
+        }
+        withdrawal accounts: [
+            {
+                account name,
+                account number,
+                bank name
+            }
+        ]
+    ]
+},
+{
+    deposit: [ (array of all the money that have been deposited with time stamps)
+        {
+            amount,
+            timestamp
+        }
+    ]
+}
+{
+    income(should have time stamp for the time of the income)
+},
+{
+    investments: [] (each object in the array of investments should have a timestamp of the investment time)
+},
+{
+    withdrawal cash: [
+        total withdrawal,
+        available withdrawal
+    ]
+},
+{
+    active investments: [ (this is an array that have all the investments that are active)
+        {
+            name, (name of stock, crypto or commodity invested in)
+            amount,
+            time (time the investment was activated),
+            percentage, ( to be earned daily) 
+            ROI (total reward on investment),
+            withdrawable (time the profit and invested money of the investment can the withdrawal),
+            close (time the investment can be closed),
+        }
+    ]
+},
+{
+    closed investments: [ (array of all the investments that have been closed, i.e completed.)
+        {
+            name, (name of stock, crypto or commodity invested in),
+            amount,
+            ROI (total reward on investment),
+            time opened (time the investment was activated),
+            time completed(time the investment was closed/completed),
+
+        }
+    ]
+}
