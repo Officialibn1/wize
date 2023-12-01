@@ -18,14 +18,17 @@
 	@apply text-3xl md:text-4xl;
 }
 
+/* Desposit card icon styles */
 .Deposit {
 	@apply text-blue-400;
 }
 
+/* Income card icon styles */
 .Income {
 	@apply text-green-400;
 }
 
+/* Active investment card icon styles */
 .Active {
 	@apply text-red-400;
 }
