@@ -1,12 +1,4 @@
-import { InvestmentCardData, UserData } from "@/typings.t";
-
-const dummyInvestmentData: InvestmentCardData = {
-	totalEarning: 50000,
-	totalIncome: 75000,
-	referralIncome: 2000,
-	totalInvested: 30000,
-	activeInvestmentIncome: 25000,
-};
+import { UserData } from "@/typings.t";
 
 // Dummy data for testing
 export const dummyUserData: UserData = {
@@ -53,10 +45,19 @@ export const dummyUserData: UserData = {
 	activeInvestments: [
 		{
 			name: "Stock ABC",
-			amount: 2000,
+			amount: 2400,
 			time: new Date("2023-03-01"),
 			percentage: 2,
 			ROI: 40,
+			withdrawable: new Date("2023-04-01"),
+			close: new Date("2023-05-01"),
+		},
+		{
+			name: "Stock APPL",
+			amount: 2320,
+			time: new Date("2023-03-06"),
+			percentage: 12,
+			ROI: 87,
 			withdrawable: new Date("2023-04-01"),
 			close: new Date("2023-05-01"),
 		},

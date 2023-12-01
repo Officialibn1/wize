@@ -1,9 +1,10 @@
+import React from "react";
+
 export type InvestmentCardData = {
-	totalEarning: number;
-	totalIncome: number;
-	referralIncome: number;
-	totalInvested: number;
-	activeInvestmentIncome: number;
+	amount: number;
+	title: string;
+	totalLength: number;
+	icon: React.ReactNode;
 };
 
 // Define types for the user schema

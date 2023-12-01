@@ -1,0 +1,55 @@
+/* dashboard cards grid container */
+.dashboardCards {
+	@apply grid grid-cols-1 gap-5 md:grid-cols-2 mt-10 lg:grid-cols-3;
+}
+
+/* individual card container */
+.dashboardCard {
+	@apply p-4 bg-[#030712] flex flex-col gap-2;
+	border-radius: 0.5rem;
+}
+
+/* card icon container styles */
+.dashboardCard .iconDiv {
+	@apply flex;
+}
+/* icon styles */
+.dashboardCard .iconDiv svg {
+	@apply text-3xl md:text-4xl;
+}
+
+.Deposit {
+	@apply text-blue-400;
+}
+
+.Income {
+	@apply text-green-400;
+}
+
+.Active {
+	@apply text-red-400;
+}
+
+/* card title styles */
+.dashboardCard h1 {
+	@apply text-2xl font-medium;
+}
+
+/* total money and quantity in the card styles */
+.dashboardCard .amountQuantity {
+	@apply flex justify-between;
+}
+
+/* total money styles */
+.dashboardCard .amountQuantity p {
+	@apply text-4xl font-light;
+}
+
+/* total quantity styles */
+.dashboardCard .amountQuantity h3 {
+	@apply text-lg;
+}
+
+.dashboardCard .amountQuantity h3 span {
+	@apply font-bold;
+}
