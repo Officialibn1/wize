@@ -60,7 +60,7 @@ const DashboardSideNav = () => {
 
 					{/* Profile */}
 					<li>
-						<Link href={"/dashboard"}>
+						<Link href={"/dashboard/profile"}>
 							<FaRegUser />
 							<span>Profile</span>
 						</Link>

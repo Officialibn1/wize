@@ -1,9 +1,10 @@
 import React from "react";
+import "@/app/components/styles/DashboardPage.css";
 
 const ProfilePage = () => {
 	return (
-		<div>
-			<h1>ProfilePage</h1>
+		<div className='dashboardPage'>
+			<h1 className='text-3xl'>Profile</h1>
 		</div>
 	);
 };

@@ -1,5 +1,5 @@
 .dashboardSideNav {
-	@apply flex flex-col gap-10 p-2 lg:p-5 col-span-2 items-center;
+	@apply flex flex-col gap-10 p-2 lg:p-5 items-center;
 }
 
 /* side nav logo container styles */
@@ -14,7 +14,7 @@
 
 /* logo text styles */
 .sideNavLogo h1 {
-	@apply text-3xl lg:text-5xl font-bold;
+	@apply text-2xl lg:text-5xl font-bold;
 }
 
 /* sidenav links styles */
