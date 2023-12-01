@@ -4,7 +4,7 @@ import "@/app/components/styles/DashboardPage.css";
 const DashboardPage = async () => {
 	return (
 		<div className='dashboardPage'>
-			<h1 className='text-3xl'>Dashboard Page</h1>
+			<h1 className='text-3xl'>Your Dashboard</h1>
 		</div>
 	);
 };

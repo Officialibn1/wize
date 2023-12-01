@@ -1,7 +1,10 @@
+"use client";
 import React from "react";
 import "@/app/components/styles/DashboardSideNav.css";
 import Link from "next/link";
 import { AiOutlineDashboard } from "react-icons/ai";
+import { signOut, useSession } from "next-auth/react";
+
 import {
 	IoLogOutOutline,
 	IoSettingsOutline,
@@ -73,7 +76,9 @@ const DashboardSideNav = () => {
 
 					{/* Logout */}
 					<li>
-						<Link href={"/dashboard"}>
+						<Link
+							href={"/"}
+							onClick={() => signOut()}>
 							<IoLogOutOutline />
 							<span>Logout</span>
 						</Link>
