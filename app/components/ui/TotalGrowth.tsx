@@ -1,6 +1,7 @@
 import React from "react";
 import "@/app/components/styles/TotalGrowth.css";
 import GrowthChart from "./GrowthChart";
+import PorpularStocks from "../PorpularStocks";
 
 const TotalGrowth = () => {
 	return (
@@ -21,6 +22,10 @@ const TotalGrowth = () => {
 				<div className='growthChartContainer'>
 					{/* growth bar chart */}
 					<GrowthChart />
+				</div>
+
+				<div className='propularStocksContainer'>
+					<PorpularStocks />
 				</div>
 			</div>
 		</div>

@@ -1,0 +1,44 @@
+/* Container that wraps the entire list of stocks */
+.porpularStocks {
+	@apply flex flex-col gap-5;
+}
+
+/* Porpular stock header */
+.porpularStocksHeader {
+	/* @apply; */
+}
+
+/* Porpular stock header tag */
+.porpularStocksHeader > h1 {
+	@apply font-semibold text-xl my-3;
+}
+
+/* porpular stock header image */
+.PorpularStocksImage {
+	@apply flex justify-between pt-3 px-3 pb-[30%];
+	border-radius: 0.5rem;
+	background-image: url("/wizehero.jpeg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+/* h1 in the porpular stock header image */
+.PorpularStocksImage h1 {
+	@apply font-bold;
+}
+
+/* p tag in the porpular stock header image */
+.PorpularStocksImage p {
+	@apply text-green-400;
+}
+
+/* h2 tag in the porpular stock header image */
+.PorpularStocksImage h2 {
+	@apply text-sm;
+}
+
+/* container wrapping all stock items */
+.PorpularStocksItems {
+	@apply flex flex-col gap-3  h-[356px] overflow-y-auto xl:h-[456px];
+}

@@ -31,10 +31,10 @@
 
 /* container wrapping the bar chart and porpular stock items */
 .barAndStockContainer {
-	@apply outline grid grid-cols-1;
+	@apply grid grid-cols-1 mt-10 gap-10  xl:grid-cols-4 h-fit;
 }
 
 /* container for the bar chart */
 .growthChartContainer {
-	@apply flex w-full overflow-x-auto;
+	@apply flex w-full overflow-x-auto xl:col-span-3 h-[40vh] xl:h-full;
 }

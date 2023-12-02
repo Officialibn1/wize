@@ -1,5 +1,7 @@
 import React from "react";
 import "@/app/components/styles/PorpularStocks.css";
+import { dummyStocks } from "../lib/placeholder_data";
+import PorpularStock from "./ui/PorpularStock";
 
 const PorpularStocks = () => {
 	return (
@@ -19,6 +21,15 @@ const PorpularStocks = () => {
 
 					<h2>${"1921.02"}</h2>
 				</div>
+			</div>
+
+			<div className='PorpularStocksItems'>
+				{dummyStocks.map((stock, i) => (
+					<PorpularStock
+						key={i}
+						stock={stock}
+					/>
+				))}
 			</div>
 		</div>
 	);

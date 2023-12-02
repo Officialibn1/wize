@@ -47,12 +47,14 @@ export const barData = {
 		{
 			label: "Profit",
 			data: weekData.map((day) => day.profit),
-			backgroundColor: "rgba(74, 222, 128, 0.5)",
+			backgroundColor: "rgba(74, 222, 128, .7)",
+			borderColor: "rgba(74, 222, 128, 1)",
 		},
 		{
 			label: "Loss",
 			data: weekData.map((day) => day.loss),
-			backgroundColor: "rgba(248, 113, 113, 0.5)",
+			backgroundColor: "rgba(248, 113, 113, .7)",
+			borderColor: "rgba(248, 113, 113, 1)",
 		},
 	],
 };
