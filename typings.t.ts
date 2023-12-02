@@ -72,3 +72,10 @@ export type UserData = {
 	closedInvestments: ClosedInvestment[];
 	dailyProfitAndLoss: DailyProfitAndLoss[];
 };
+
+// Typings for the stock data
+export type Stock = {
+	name: string;
+	price: number;
+	percentageChange: number;
+};

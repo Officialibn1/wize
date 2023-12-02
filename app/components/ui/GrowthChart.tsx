@@ -39,8 +39,6 @@ export const getWeeklyData = (weekIndex: number): DailyProfitAndLoss[] => {
 
 const weekData = getWeeklyData(0);
 
-console.log(weekData);
-
 const labels = weekData.map((day) => day.day);
 
 export const barData = {

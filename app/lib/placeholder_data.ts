@@ -1,4 +1,4 @@
-import { UserData } from "@/typings.t";
+import { Stock, UserData } from "@/typings.t";
 
 // Dummy data for testing
 export const dummyUserData: UserData = {
@@ -174,3 +174,82 @@ export const dummyUserData: UserData = {
 		// ... Repeat for the next two weeks
 	],
 };
+
+// Dummy data for the placeholder stocks
+export const dummyStocks: Stock[] = [
+	{
+		name: "Apple Inc.",
+		price: 150.25,
+		percentageChange: 2.5,
+	},
+	{
+		name: "Microsoft Corporation",
+		price: 300.75,
+		percentageChange: -1.8,
+	},
+	{
+		name: "Amazon.com Inc.",
+		price: 3400.5,
+		percentageChange: 0.2,
+	},
+	{
+		name: "Google Alphabet Inc.",
+		price: 2650.8,
+		percentageChange: 1.5,
+	},
+	{
+		name: "Tesla Inc.",
+		price: 800.0,
+		percentageChange: -3.0,
+	},
+	{
+		name: "Facebook Inc.",
+		price: 325.5,
+		percentageChange: 0.8,
+	},
+	{
+		name: "Johnson & Johnson",
+		price: 170.6,
+		percentageChange: -0.5,
+	},
+	{
+		name: "Procter & Gamble Co.",
+		price: 145.3,
+		percentageChange: 1.2,
+	},
+	{
+		name: "Intel Corporation",
+		price: 55.8,
+		percentageChange: -0.7,
+	},
+	{
+		name: "Cisco Systems Inc.",
+		price: 55.25,
+		percentageChange: 0.5,
+	},
+	{
+		name: "Walmart Inc.",
+		price: 142.9,
+		percentageChange: -2.0,
+	},
+	{
+		name: "Johnson Controls International plc",
+		price: 68.4,
+		percentageChange: 2.8,
+	},
+	{
+		name: "The Home Depot Inc.",
+		price: 345.1,
+		percentageChange: -0.3,
+	},
+	{
+		name: "Verizon Communications Inc.",
+		price: 55.75,
+		percentageChange: 0.1,
+	},
+	{
+		name: "Coca-Cola Company",
+		price: 55.2,
+		percentageChange: 1.0,
+	},
+];

@@ -16,6 +16,7 @@ const TotalGrowth = () => {
 				<button>This Week</button>
 			</div>
 
+			{/* catainer wrapping the barchart and porpular stocks list */}
 			<div className='barAndStockContainer'>
 				<div className='growthChartContainer'>
 					{/* growth bar chart */}
