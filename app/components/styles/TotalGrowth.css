@@ -1,5 +1,5 @@
 .totalGrowth {
-	@apply outline mt-10 p-3 bg-[#030712a5];
+	@apply mt-10 p-3 bg-[#030712a5];
 }
 
 /* header container wrapping the total growth header and the button at the right hand side */
@@ -25,4 +25,11 @@
 	@apply px-3 py-2 lg:hover:bg-slate-900 duration-300 ease-in-out;
 	border-radius: 0.5rem;
 	border: 1px solid rgb(49, 56, 73);
+	/* color: rgba(74, 222, 128, 0.5); */
+	/* color: rgba(248, 113, 113, 0.5); */
+}
+
+/* container for the bar chart */
+.growthChartContainer {
+	@apply flex overflow-x-auto;
 }

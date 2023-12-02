@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import "@/app/components/styles/GrowthChart.css";
 import {
@@ -13,6 +14,7 @@ import {
 import { Bar } from "react-chartjs-2";
 import { DailyProfitAndLoss } from "@/typings.t";
 import { dummyUserData } from "@/app/lib/placeholder_data";
+import { barChartOptions } from "@/app/lib/chartjsOptions";
 
 ChartJS.register(
 	CategoryScale,
@@ -35,12 +37,36 @@ export const getWeeklyData = (weekIndex: number): DailyProfitAndLoss[] => {
 	return weeklyData;
 };
 
+const weekData = getWeeklyData(0);
+
+console.log(weekData);
+
+const labels = weekData.map((day) => day.day);
+
+export const barData = {
+	labels,
+	datasets: [
+		{
+			label: "Profit",
+			data: weekData.map((day) => day.profit),
+			backgroundColor: "rgba(74, 222, 128, 0.5)",
+		},
+		{
+			label: "Loss",
+			data: weekData.map((day) => day.loss),
+			backgroundColor: "rgba(248, 113, 113, 0.5)",
+		},
+	],
+};
 const GrowthChart = () => {
-	const weekData = getWeeklyData(0);
-
-	console.log(weekData);
-
-	return <div className='growthChart'></div>;
+	return (
+		<div className='growthChart'>
+			<Bar
+				options={barChartOptions}
+				data={barData}
+			/>
+		</div>
+	);
 };
 
 export default GrowthChart;

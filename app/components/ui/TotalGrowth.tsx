@@ -16,7 +16,7 @@ const TotalGrowth = () => {
 				<button>Today</button>
 			</div>
 
-			<div>
+			<div className='growthChartContainer'>
 				{/* growth bar chart */}
 				<GrowthChart />
 			</div>

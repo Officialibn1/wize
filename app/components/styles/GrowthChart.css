@@ -1,0 +1,4 @@
+/* The bar chart container */
+.growthChart {
+	@apply w-[630px] md:w-full;
+}

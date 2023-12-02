@@ -1,5 +1,6 @@
 export const barChartOptions = {
 	responsive: true,
+	// maintainAspectRatio: false,
 	plugins: {
 		legend: {
 			position: "top" as const,
