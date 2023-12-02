@@ -40,6 +40,14 @@ type ClosedInvestment = {
 	timeCompleted: Date;
 };
 
+export type DailyProfitAndLoss = {
+	day: string; // e.g., "Monday", "Tuesday", ...
+	profit: number;
+	loss: number;
+	net: number;
+	date: string;
+};
+
 export type UserData = {
 	name: string;
 	email: string;
@@ -62,4 +70,5 @@ export type UserData = {
 	};
 	activeInvestments: ActiveInvestment[];
 	closedInvestments: ClosedInvestment[];
+	dailyProfitAndLoss: DailyProfitAndLoss[];
 };
