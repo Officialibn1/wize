@@ -6,6 +6,7 @@ export const dummyUserData: UserData = {
 	email: "johndoe@gmail.com",
 	password: "12345",
 	username: "john_doe",
+	phoneNumber: "+234 903 8880 282",
 	address: {
 		houseNumber: "123",
 		street: "Main Street",

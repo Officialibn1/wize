@@ -45,6 +45,7 @@ export type UserData = {
 	email: string;
 	password: string;
 	username: string;
+	phoneNumber: string;
 	address: Address;
 	accounts: {
 		depositAccount: Account;
