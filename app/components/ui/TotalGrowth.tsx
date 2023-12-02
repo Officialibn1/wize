@@ -13,12 +13,14 @@ const TotalGrowth = () => {
 				</div>
 
 				{/* button whos purpose will be to toggle beyween today, this week , this month, this year */}
-				<button>Today</button>
+				<button>This Week</button>
 			</div>
 
-			<div className='growthChartContainer'>
-				{/* growth bar chart */}
-				<GrowthChart />
+			<div className='barAndStockContainer'>
+				<div className='growthChartContainer'>
+					{/* growth bar chart */}
+					<GrowthChart />
+				</div>
 			</div>
 		</div>
 	);

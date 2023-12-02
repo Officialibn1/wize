@@ -29,7 +29,12 @@
 	/* color: rgba(248, 113, 113, 0.5); */
 }
 
+/* container wrapping the bar chart and porpular stock items */
+.barAndStockContainer {
+	@apply outline grid grid-cols-1;
+}
+
 /* container for the bar chart */
 .growthChartContainer {
-	@apply flex overflow-x-auto;
+	@apply flex w-full overflow-x-auto;
 }
