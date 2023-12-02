@@ -19,7 +19,7 @@
 
 /* div  wrapping the text and buttons */
 .ourServiceHeader > div > div {
-	@apply flex flex-col gap-3 md:w-2/3 lg:w-1/2 lg:ml-[10%];
+	@apply flex flex-col gap-3 md:w-2/3 lg:w-1/2 md:ml-[15%];
 }
 
 /* Header text  */
@@ -30,4 +30,19 @@
 /* paragraph text  */
 .ourServiceHeader > div > div p {
 	@apply text-lg font-light;
+}
+
+/* container for texts directly under the hero banner */
+.teamAproach {
+	@apply px-3 md:px-5 py-10 lg:py-24 flex;
+}
+
+/* div wrapping the texts directly under the hero banner */
+.teamAproach > div {
+	@apply md:w-[70%] mx-auto;
+}
+
+/* the text styles */
+.teamAproach > div p {
+	@apply text-base font-light lg:text-lg;
 }
