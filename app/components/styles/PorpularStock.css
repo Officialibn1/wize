@@ -4,3 +4,39 @@
 	border-radius: 0.5rem;
 	border: 1px solid rgb(49, 56, 73);
 }
+
+/* Style for the stock name and change percentage container */
+.porpularStock .stockText {
+	@apply flex flex-col gap-1;
+}
+
+/* Style for the stock name  */
+.porpularStock .stockText h1 {
+	@apply text-sm font-semibold;
+}
+
+/* Style for the stock percentage change  */
+.porpularStock .stockText p {
+	@apply text-xs font-light;
+}
+
+/* Style for the stock price container */
+.porpularStock .stockPrice {
+	@apply flex flex-col justify-between items-end;
+}
+
+/* Style for the stock price  */
+.porpularStock .stockPrice h3 {
+	@apply text-lg font-extralight;
+}
+
+/* Style for the stock price icon container */
+.porpularStock .stockPrice span {
+	@apply h-5 w-5 flex mt-2;
+	border-radius: 0.3rem;
+}
+
+/* Style for the stock price icon  */
+.porpularStock .stockPrice span svg {
+	@apply m-auto;
+}
