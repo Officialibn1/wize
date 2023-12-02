@@ -1,4 +1,5 @@
 import React from "react";
+import "@/app/components/styles/GrowthChart.css";
 
 const GrowthChart = () => {
 	return (
