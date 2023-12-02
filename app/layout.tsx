@@ -6,7 +6,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
 		<html lang='en'>
 			<body>
 				<AuthProviders>
-					<main className='w-full outline h-fit'>{children}</main>
+					<main className='w-full h-fit'>{children}</main>
 				</AuthProviders>
 			</body>
 		</html>

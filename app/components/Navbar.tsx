@@ -45,7 +45,7 @@ const HomeNavbar = () => {
 						<Link href={"/"}>Markets</Link>
 					</li>
 					<li>
-						<Link href={"/"}>Learn</Link>
+						<Link href={"/services"}>Services</Link>
 					</li>
 					<li>
 						<Link href={"/"}>FAQs</Link>
@@ -112,8 +112,8 @@ const HomeNavbar = () => {
 					<li>
 						<Link
 							onClick={() => toggler()}
-							href={"/"}>
-							Learn
+							href={"/services"}>
+							Services
 						</Link>
 					</li>
 					<li>
