@@ -2,12 +2,16 @@ import React from "react";
 import "@/app/components/styles/ServicesPage.css";
 import HomeNavbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Link from "next/link";
+import OurServiceHeader from "../components/OurServiceHeader";
 
 const ServicesPage = () => {
 	return (
 		<div className='servicesPage'>
 			<HomeNavbar />
-			<h1 className='text3xl'>ServicesPage</h1>
+
+			{/* Hero banner */}
+			<OurServiceHeader />
 
 			<Footer />
 		</div>

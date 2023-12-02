@@ -1,0 +1,33 @@
+.ourServiceHeader {
+	/* @apply py-10 px-3 md:px-5; */
+	background-image: url("/customer-service.webp");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+/* div that have the linear gradient effect */
+.ourServiceHeader > div {
+	@apply py-10 px-3 md:px-5 lg:py-24;
+	background: linear-gradient(
+		125deg,
+		rgba(37, 43, 46, 0.5),
+		rgba(46, 45, 58, 0.7),
+		rgba(37, 43, 46, 0.5)
+	);
+}
+
+/* div  wrapping the text and buttons */
+.ourServiceHeader > div > div {
+	@apply flex flex-col gap-3 md:w-2/3 lg:w-1/2 lg:ml-[10%];
+}
+
+/* Header text  */
+.ourServiceHeader > div > div h1 {
+	@apply text-4xl font-bold lg:font-extrabold lg:text-5xl;
+}
+
+/* paragraph text  */
+.ourServiceHeader > div > div p {
+	@apply text-lg font-light;
+}
