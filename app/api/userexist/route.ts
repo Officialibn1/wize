@@ -9,7 +9,7 @@ export const POST = async (req: Request) => {
 
 		const user = await User.findOne({ email }).select("_id");
 
-		console.log("From Api:", user);
+		// console.log("From Api:", user);
 
 		return NextResponse.json({ user });
 	} catch (e: any) {

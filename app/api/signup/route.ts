@@ -19,7 +19,7 @@ export const POST = async (req: Request) => {
 			{ status: 201 },
 		);
 	} catch (error) {
-		console.log(error);
+		// console.log(error);
 		return NextResponse.json(
 			{ message: "Registeration Operation UnSuccessful", error },
 			{ status: 500 },

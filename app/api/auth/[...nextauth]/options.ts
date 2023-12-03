@@ -30,12 +30,14 @@ export const authOptions = {
 
 					if (!passwordMatch) return null;
 
-					console.log(user);
+					// console.log(user);
 
 					return user;
 				} catch (e) {
 					const error = e as Error;
-					console.log(error.message);
+					console.error(error);
+
+					// console.log(error.message);
 				}
 			},
 		}),

@@ -12,7 +12,7 @@ const HomeNavbar = () => {
 	// use server session instance
 	const { data: session, status } = useSession();
 
-	console.log(session?.user);
+	// console.log(session?.user);
 
 	const toggler = () => {
 		setNavState((prev) => !prev);
@@ -32,14 +32,14 @@ const HomeNavbar = () => {
 						<Link
 							className='active'
 							href={"/"}>
-							Learn
+							Home
 						</Link>
 					</li>
 					<li>
-						<Link href={"/"}>Accounts</Link>
+						<Link href={"/accounts"}>Accounts</Link>
 					</li>
 					<li>
-						<Link href={"/"}>Pricing</Link>
+						<Link href={"/pricing"}>Pricing</Link>
 					</li>
 					<li>
 						<Link href={"/technology"}>Technology</Link>
@@ -48,7 +48,7 @@ const HomeNavbar = () => {
 						<Link href={"/services"}>Services</Link>
 					</li>
 					<li>
-						<Link href={"/"}>FAQs</Link>
+						<Link href={"/faqs"}>FAQs</Link>
 					</li>
 				</ul>
 			</div>
@@ -85,20 +85,20 @@ const HomeNavbar = () => {
 						<Link
 							className='active'
 							href={"/"}>
-							Learn
+							Home
 						</Link>
 					</li>
 					<li>
 						<Link
 							onClick={() => toggler()}
-							href={"/"}>
+							href={"/accounts"}>
 							Accounts
 						</Link>
 					</li>
 					<li>
 						<Link
 							onClick={() => toggler()}
-							href={"/"}>
+							href={"/pricing"}>
 							Pricing
 						</Link>
 					</li>
@@ -119,7 +119,7 @@ const HomeNavbar = () => {
 					<li>
 						<Link
 							onClick={() => toggler()}
-							href={"/"}>
+							href={"/faqs"}>
 							FAQs
 						</Link>
 					</li>
