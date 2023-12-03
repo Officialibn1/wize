@@ -39,6 +39,6 @@
 }
 
 /* container wrapping all stock items */
-.PorpularStocksItems {
-	@apply flex flex-col gap-3  h-[356px] overflow-y-auto xl:h-[456px];
+.porpularStocksItems {
+	@apply flex flex-col gap-3  h-[356px] overflow-y-auto xl:h-[316px];
 }

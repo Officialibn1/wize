@@ -23,7 +23,7 @@ const PorpularStocks = () => {
 				</div>
 			</div>
 
-			<div className='PorpularStocksItems'>
+			<div className='porpularStocksItems'>
 				{dummyStocks.map((stock, i) => (
 					<PorpularStock
 						key={i}
