@@ -29,7 +29,7 @@
 
 /* paragraph text  */
 .ourServiceHeader > div > div p {
-	@apply text-lg font-light;
+	@apply text-xl font-light;
 }
 
 /* container for texts directly under the hero banner */
@@ -44,5 +44,5 @@
 
 /* the text styles */
 .teamAproach > div p {
-	@apply text-base font-light lg:text-lg;
+	@apply text-lg font-light;
 }

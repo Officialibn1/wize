@@ -1,0 +1,64 @@
+/* Services list section container  */
+.servicesList {
+	@apply px-3 py-10 flex flex-col gap-8 lg:w-[80%] mx-auto xl:w-[70%] lg:gap-16;
+}
+
+/* Individual service Item container */
+.serviceItem {
+	@apply flex flex-col gap-5  xl:flex-row;
+}
+
+/* Icon and Text title of each service */
+.serviceImage {
+	@apply flex flex-col gap-3 items-center xl:items-start xl:w-1/3;
+}
+
+/* icon container */
+.serviceImage > div {
+	@apply h-32 w-32 flex;
+}
+
+/* icon styles */
+.serviceImage > div svg {
+	@apply text-8xl m-auto;
+	color: rgba(68, 56, 202, 0.8);
+}
+
+/* service title  */
+.serviceImage h1 {
+	@apply text-3xl font-bold;
+	background: linear-gradient(
+		125deg,
+		rgba(14, 164, 233),
+		rgba(68, 56, 202),
+		rgba(14, 164, 233)
+	);
+	-webkit-background-clip: text; /* For Safari */
+	background-clip: text;
+	color: transparent;
+}
+
+/* serviceText container */
+.serviceText {
+	@apply flex flex-col gap-3 md:w-2/3 xl:w-1/2 md:mx-auto  xl:ml-auto xl:mx-0;
+}
+
+/* paragraph text in the serviceText container */
+.serviceText p {
+	@apply text-lg font-light;
+}
+
+/* list item in the serviceText container */
+.serviceText ul {
+	@apply list-disc px-2;
+}
+
+/* h2 in list item styles */
+.serviceText ul li h2 {
+	@apply font-semibold;
+}
+
+/* List disk style */
+.serviceText ul li::marker {
+	color: rgba(68, 56, 202);
+}

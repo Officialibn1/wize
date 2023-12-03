@@ -4,6 +4,8 @@ import HomeNavbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Link from "next/link";
 import OurServiceHeader from "../components/OurServiceHeader";
+import ServicesList from "../components/ServicesList";
+import Disclaimer from "../components/Disclaimer";
 
 const ServicesPage = () => {
 	return (
@@ -13,6 +15,7 @@ const ServicesPage = () => {
 			{/* Hero banner */}
 			<OurServiceHeader />
 
+			{/* Text under the service hero section */}
 			<div className='teamAproach'>
 				<div>
 					<p>
@@ -33,7 +36,12 @@ const ServicesPage = () => {
 				</div>
 			</div>
 
+			{/* List of services */}
+			<ServicesList />
+
 			<Footer />
+
+			<Disclaimer />
 		</div>
 	);
 };
