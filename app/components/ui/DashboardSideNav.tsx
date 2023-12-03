@@ -68,7 +68,7 @@ const DashboardSideNav = () => {
 
 					{/* Settings */}
 					<li>
-						<Link href={"/dashboard"}>
+						<Link href={"/dashboard/settings"}>
 							<IoSettingsOutline />
 							<span>Settings</span>
 						</Link>

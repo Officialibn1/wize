@@ -1,0 +1,70 @@
+/* main container for the settings page */
+.settingsPageContent {
+	@apply mt-10 flex flex-col gap-5;
+}
+
+/* image container wrapping both image and text */
+.settingsPageContent .profileImage {
+	@apply flex gap-3 items-center;
+}
+
+/* change image text */
+.settingsPageContent .profileImage p {
+	@apply text-sm font-light underline cursor-pointer hover:text-indigo-700;
+}
+
+/* div containing the image in width and height */
+.settingsPageContent .profileImage > div {
+	@apply w-28 h-28 rounded-full;
+}
+
+/* the main profile image element */
+.settingsPageContent .profileImage > div img {
+	@apply w-28 h-28 rounded-full;
+}
+
+/* information container wrapping the form element */
+.profileInformation {
+	@apply w-full flex;
+}
+
+/* form and settings title container */
+.settingsForm {
+	@apply flex flex-col gap-5;
+}
+
+/* form title text */
+.settingsForm legend {
+	@apply text-lg font-semibold;
+}
+
+/* the form element displaying all the informations */
+.settingsForm form {
+	@apply grid grid-cols-1 lg:grid-cols-2 gap-5 w-full xl:w-2/3;
+}
+
+/* the label element wrapping the input and span */
+.settingsForm form > label {
+	@apply flex flex-col gap-1;
+}
+
+/* target the last input group */
+.settingsForm form > label:nth-child(5) {
+	@apply lg:col-span-2;
+}
+
+/* span description styles */
+.settingsForm form > label > span {
+	@apply text-sm font-medium;
+}
+
+/* the disabled input styles */
+.settingsForm form > label > input {
+	@apply bg-[#030712];
+	border-radius: 0.5rem;
+	border: 1px solid rgb(49, 56, 73);
+}
+
+.settingsForm form > div {
+	@apply flex justify-end;
+}
