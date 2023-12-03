@@ -37,6 +37,8 @@ const ServicesList = () => {
 				</div>
 			</div>
 
+			<hr />
+
 			{/* second item (Institutional Execution Services) */}
 			<div className='serviceItem'>
 				<div className='serviceImage'>
@@ -59,6 +61,8 @@ const ServicesList = () => {
 				</div>
 			</div>
 
+			<hr />
+
 			{/* third item (Security Lending) */}
 			<div className='serviceItem'>
 				<div className='serviceImage'>
@@ -80,6 +84,8 @@ const ServicesList = () => {
 					</p>
 				</div>
 			</div>
+
+			<hr />
 
 			{/* forth item (Advisory Services) */}
 			<div className='serviceItem'>
