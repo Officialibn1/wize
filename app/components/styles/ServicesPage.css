@@ -7,7 +7,8 @@
 }
 
 /* div that have the linear gradient effect */
-.ourServiceHeader > div {
+.ourServiceHeader > div,
+.ourTechnologyHeader > div {
 	@apply py-10 px-3 md:px-5 lg:py-24;
 	background: linear-gradient(
 		125deg,
@@ -18,17 +19,20 @@
 }
 
 /* div  wrapping the text and buttons */
-.ourServiceHeader > div > div {
+.ourServiceHeader > div > div,
+.ourTechnologyHeader > div > div {
 	@apply flex flex-col gap-3 md:w-2/3 lg:w-1/2 md:ml-[15%];
 }
 
 /* Header text  */
-.ourServiceHeader > div > div h1 {
+.ourServiceHeader > div > div h1,
+.ourTechnologyHeader > div > div h1 {
 	@apply text-4xl font-bold lg:font-extrabold lg:text-5xl;
 }
 
 /* paragraph text  */
-.ourServiceHeader > div > div p {
+.ourServiceHeader > div > div p,
+.ourTechnologyHeader > div > div p {
 	@apply text-xl font-light;
 }
 
