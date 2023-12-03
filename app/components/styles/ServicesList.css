@@ -1,6 +1,11 @@
 /* Services list section container  */
 .servicesList {
-	@apply px-3 py-10 flex flex-col gap-8 lg:w-[80%] mx-auto xl:w-[70%] lg:gap-16;
+	@apply px-3 py-10 flex flex-col gap-8 lg:w-[80%] mx-auto xl:w-[70%] lg:gap-16 lg:py-24;
+}
+
+/* horizontal line styles */
+.servicesList hr {
+	border-color: rgb(71 85 105 / 0.8);
 }
 
 /* Individual service Item container */

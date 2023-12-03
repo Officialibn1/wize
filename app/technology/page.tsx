@@ -1,11 +1,11 @@
 import React from "react";
 import "@/app/components/styles/TechnologyPage.css";
 import "@/app/components/styles/ServicesPage.css";
-import ServicesList from "../components/ServicesList";
 import Footer from "../components/Footer";
 import Disclaimer from "../components/Disclaimer";
 import HomeNavbar from "../components/Navbar";
 import OurTechnologyHeader from "../components/ui/OurTechnologyHeader";
+import TechnologyList from "../components/TechnologyList";
 
 const TechnologyPage = () => {
 	return (
@@ -14,7 +14,7 @@ const TechnologyPage = () => {
 
 			<OurTechnologyHeader />
 
-			<ServicesList />
+			<TechnologyList />
 
 			<Footer />
 
