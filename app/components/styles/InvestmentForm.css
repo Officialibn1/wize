@@ -1,0 +1,75 @@
+.investmentForm {
+	/* @apply outline; */
+}
+
+.investmentForm {
+	@apply flex flex-col gap-5;
+}
+
+/* form title text */
+.investmentForm form legend {
+	@apply text-2xl font-semibold mb-2 mt-10;
+	/* border-bottom: 1px solid #; */
+}
+
+/* the form element displaying all the informations */
+.investmentForm form > div {
+	@apply grid grid-cols-1 lg:grid-cols-2 gap-5 w-full xl:w-2/3;
+}
+
+/* the label element wrapping the input and span */
+.investmentForm form > div > label {
+	@apply flex flex-col gap-1;
+}
+
+/* styling for the radio select options */
+.investmentForm form > div > fieldset {
+	@apply flex flex-col;
+}
+
+/* radios container */
+.investmentForm form > div > fieldset > div {
+	@apply flex flex-col gap-2;
+}
+
+/* radio group  */
+.investmentForm form > div > fieldset > div label {
+	@apply flex items-center gap-2;
+}
+
+/* radios span */
+.investmentForm form > div > fieldset > div label span {
+	@apply text-sm;
+}
+
+/* radios input */
+.investmentForm form > div > fieldset > div label input {
+	@apply h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600/60;
+}
+
+/* span description styles */
+.investmentForm form > div > label > span {
+	@apply text-sm font-medium;
+}
+
+/* P tags for more information */
+.investmentForm form > div > label p {
+	@apply text-xs font-semibold;
+}
+
+/* the disabled input styles */
+.investmentForm form > div > label > input,
+select {
+	@apply bg-[#030712];
+	border-radius: 0.5rem;
+	border: 1px solid rgb(49, 56, 73);
+}
+
+.investmentForm form > div > div {
+	@apply flex justify-end lg:col-span-2;
+}
+
+/* target the last div for the button */
+/* .investmentForm form > div > div {
+	@apply lg:col-span-2 outline;
+} */

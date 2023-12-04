@@ -1,6 +1,7 @@
 import React from "react";
 import "@/app/components/styles/DashboardPage.css";
 import "@/app/components/styles/NewInvestmentPage.css";
+import "@/app/components/styles/InvestmentForm.css";
 import InvestmentForm from "@/app/components/ui/InvestmentForm";
 import { FaFilterCircleDollar, FaMoneyBillTransfer } from "react-icons/fa6";
 import { GiMoneyStack, GiTakeMyMoney } from "react-icons/gi";
