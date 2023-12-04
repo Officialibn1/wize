@@ -1,0 +1,46 @@
+/* Investment Page */
+.newInvestmentPage {
+	@apply outline;
+}
+
+/* container wrapping the form and card */
+.investmentFormContainer {
+	@apply outline mt-10 flex flex-col gap-5;
+}
+
+/* grid container for the cards */
+.investmentFormContainer .investmentBallance {
+	@apply grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-5;
+}
+
+/* individual card */
+.investmentFormContainer .investmentBallance > div {
+	@apply flex justify-between items-center p-5 bg-[#030712];
+	border-radius: 0.5rem;
+}
+
+/* text container for individual cards */
+.investmentFormContainer .investmentBallance > div > div:first-child {
+	@apply flex flex-col gap-2;
+}
+
+/* h2 text for individual cards */
+.investmentFormContainer .investmentBallance > div > div:first-child h2 {
+	@apply font-medium text-lg;
+}
+
+/* h1 text for individual cards */
+.investmentFormContainer .investmentBallance > div > div:first-child h1 {
+	@apply font-semibold text-2xl;
+}
+
+/* p text for individual cards */
+.investmentFormContainer .investmentBallance > div > div:first-child p {
+	@apply font-light text-sm;
+}
+
+/* icon container for individual cards */
+.investmentFormContainer .investmentBallance > div > div:last-child {
+	@apply p-2 text-3xl;
+	border-radius: 0.5rem;
+}
