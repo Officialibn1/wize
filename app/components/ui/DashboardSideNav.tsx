@@ -52,7 +52,7 @@ const DashboardSideNav = () => {
 
 					{/* New Investment */}
 					<li>
-						<Link href={"/dashboard"}>
+						<Link href={"/dashboard/new_investment"}>
 							<GiMoneyStack />
 							<span>New Investment</span>
 						</Link>
