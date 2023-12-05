@@ -36,7 +36,7 @@ const DashboardSideNav = () => {
 
 					{/* wallet */}
 					<li>
-						<Link href={"/dashboard"}>
+						<Link href={"/dashboard/wallet"}>
 							<IoWalletOutline />
 							<span>Wallet</span>
 						</Link>
@@ -44,7 +44,7 @@ const DashboardSideNav = () => {
 
 					{/* Transactions */}
 					<li>
-						<Link href={"/dashboard"}>
+						<Link href={"/dashboard/transactions"}>
 							<GrTransaction />
 							<span>Transactions</span>
 						</Link>
