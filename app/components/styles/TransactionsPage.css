@@ -1,0 +1,63 @@
+.transactionsPage {
+	/* @apply outline; */
+}
+
+/* Table main container */
+.transactionsTableContainer {
+	@apply mt-10;
+}
+
+/* main container wrapping the table component */
+.transactionsTable {
+	@apply flex overflow-x-auto;
+}
+
+/* the table component */
+.transactionsTable table {
+	@apply min-w-[500px] table-auto md:min-w-full border-spacing-y-2 border-separate;
+}
+
+/* the table header component */
+.transactionsTable table thead tr th {
+	@apply text-start py-4 px-2 text-lg font-normal bg-[#030712];
+}
+
+/* first table head cell border */
+.transactionsTable table thead tr th:first-child {
+	@apply rounded-s-lg;
+}
+
+/* last table head cell border */
+.transactionsTable table thead tr th:last-child {
+	@apply rounded-e-lg;
+}
+
+/* table body row style */
+.transactionsTable table tbody tr {
+	@apply cursor-pointer;
+}
+
+/* table cell style when row is hovered */
+.transactionsTable table tbody tr:hover td {
+	@apply bg-slate-700/50 duration-150 ease-linear;
+}
+
+/* the table body component */
+.transactionsTable table tbody tr td {
+	@apply text-start py-2 px-2 text-base bg-slate-800/30;
+	/* border-bottom: 1px solid #030712; */
+}
+
+.transactionsTable table tbody tr td span {
+	@apply rounded-md;
+}
+
+/* first table cell border */
+.transactionsTable table tbody tr td:first-child {
+	@apply rounded-s-lg;
+}
+
+/* last table cell border */
+.transactionsTable table tbody tr td:last-child {
+	@apply rounded-e-lg;
+}

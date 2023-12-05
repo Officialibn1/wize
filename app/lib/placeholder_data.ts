@@ -1,4 +1,4 @@
-import { Stock, UserData } from "@/typings.t";
+import { InvestmentTransaction, Stock, UserData } from "@/typings.t";
 
 // Dummy data for testing
 export const dummyUserData: UserData = {
@@ -251,5 +251,183 @@ export const dummyStocks: Stock[] = [
 		name: "Coca-Cola Company",
 		price: 55.2,
 		percentageChange: 1.0,
+	},
+];
+
+// random data generation
+function generateRandomId(length: number): string {
+	const characters =
+		"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+	let result = "";
+
+	for (let i = 0; i < length; i++) {
+		const randomIndex = Math.floor(Math.random() * characters.length);
+		result += characters.charAt(randomIndex);
+	}
+
+	return result;
+}
+
+// Dummy data for transactions table
+export const dummyInvestmentTransactions: InvestmentTransaction[] = [
+	{
+		transactionId: generateRandomId(8),
+		investmentName: "Apple Inc.",
+		type: "Deposit",
+		date: "15/01/23",
+		amount: 1000,
+		status: "Completed",
+	},
+	{
+		transactionId: generateRandomId(8),
+		investmentName: "Microsoft Corporation",
+		type: "Withdrawal",
+		date: "16/01/23",
+		amount: 500,
+		status: "Pending",
+	},
+	{
+		transactionId: generateRandomId(8),
+		investmentName: "Amazon.com Inc.",
+		type: "Dividend",
+		date: "17/01/23",
+		amount: 200,
+		status: "Failed",
+	},
+	{
+		transactionId: generateRandomId(8),
+		investmentName: "Google Alphabet Inc.",
+		type: "Deposit",
+		date: "18/01/23",
+		amount: 1500,
+		status: "Completed",
+	},
+	{
+		transactionId: generateRandomId(8),
+		investmentName: "Tesla Inc.",
+		type: "Withdrawal",
+		date: "19/01/23",
+		amount: 800,
+		status: "Pending",
+	},
+	{
+		transactionId: generateRandomId(8),
+		investmentName: "Facebook Inc.",
+		type: "Dividend",
+		date: "20/01/23",
+		amount: 300,
+		status: "Completed",
+	},
+	{
+		transactionId: generateRandomId(8),
+		investmentName: "Johnson & Johnson",
+		type: "Deposit",
+		date: "21/01/23",
+		amount: 1200,
+		status: "Failed",
+	},
+	{
+		transactionId: generateRandomId(8),
+		investmentName: "Procter & Gamble Co.",
+		type: "Withdrawal",
+		date: "22/01/23",
+		amount: 400,
+		status: "Pending",
+	},
+	{
+		transactionId: generateRandomId(8),
+		investmentName: "Intel Corporation",
+		type: "Dividend",
+		date: "23/01/23",
+		amount: 250,
+		status: "Completed",
+	},
+	{
+		transactionId: generateRandomId(8),
+		investmentName: "Cisco Systems Inc.",
+		type: "Deposit",
+		date: "24/01/23",
+		amount: 1800,
+		status: "Failed",
+	},
+	{
+		transactionId: generateRandomId(8),
+		investmentName: "Walmart Inc.",
+		type: "Withdrawal",
+		date: "25/01/23",
+		amount: 900,
+		status: "Pending",
+	},
+	{
+		transactionId: generateRandomId(8),
+		investmentName: "Johnson Controls International plc",
+		type: "Dividend",
+		date: "26/01/23",
+		amount: 350,
+		status: "Completed",
+	},
+	{
+		transactionId: generateRandomId(8),
+		investmentName: "The Home Depot Inc.",
+		type: "Deposit",
+		date: "27/01/23",
+		amount: 1600,
+		status: "Failed",
+	},
+	{
+		transactionId: generateRandomId(8),
+		investmentName: "Verizon Communications Inc.",
+		type: "Withdrawal",
+		date: "28/01/23",
+		amount: 700,
+		status: "Pending",
+	},
+	{
+		transactionId: generateRandomId(8),
+		investmentName: "Coca-Cola Company",
+		type: "Dividend",
+		date: "29/01/23",
+		amount: 400,
+		status: "Completed",
+	},
+	{
+		transactionId: generateRandomId(8),
+		investmentName: "Netflix Inc.",
+		type: "Deposit",
+		date: "30/01/23",
+		amount: 2000,
+		status: "Failed",
+	},
+	{
+		transactionId: generateRandomId(8),
+		investmentName: "Adobe Inc.",
+		type: "Withdrawal",
+		date: "31/01/23",
+		amount: 600,
+		status: "Pending",
+	},
+	{
+		transactionId: generateRandomId(8),
+		investmentName: "Salesforce.com Inc.",
+		type: "Dividend",
+		date: "01/02/23",
+		amount: 300,
+		status: "Completed",
+	},
+	{
+		transactionId: generateRandomId(8),
+		investmentName: "IBM",
+		type: "Deposit",
+		date: "02/02/23",
+		amount: 1400,
+		status: "Failed",
+	},
+	{
+		transactionId: generateRandomId(8),
+		investmentName: "Oracle Corporation",
+		type: "Withdrawal",
+		date: "03/02/23",
+		amount: 550,
+		status: "Pending",
 	},
 ];

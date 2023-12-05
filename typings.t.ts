@@ -79,3 +79,12 @@ export type Stock = {
 	price: number;
 	percentageChange: number;
 };
+
+export interface InvestmentTransaction {
+	transactionId: string;
+	investmentName: string;
+	type: "Deposit" | "Withdrawal" | "Dividend";
+	date: string; // Assuming it's a string in the format DD/MM/YY
+	amount: number;
+	status: "Pending" | "Completed" | "Failed";
+}
