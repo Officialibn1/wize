@@ -86,3 +86,11 @@ I need you to define a mongoose schema for the userdata, The schema should have 
         }
     ]
 }
+
+{
+    Id,
+    Name,
+    Icon,
+    Amount,
+    ColorStyle,
+}

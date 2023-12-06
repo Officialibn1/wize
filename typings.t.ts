@@ -88,3 +88,12 @@ export interface InvestmentTransaction {
 	amount: number;
 	status: "Pending" | "Completed" | "Failed";
 }
+
+export type Wallet = {
+	name: string;
+	icon: React.ReactNode;
+	amount: number;
+	quantity: number;
+	iconColor: string;
+	bgColor: string;
+};

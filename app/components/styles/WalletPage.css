@@ -1,0 +1,98 @@
+/* wallets page container */
+.walletsContainer {
+	@apply mt-10;
+}
+
+/* grid container for all the cards */
+.cryptoWallets {
+	@apply grid grid-cols-1 gap-8 md:gap-5 md:grid-cols-3 p-1 max-w-[750px];
+}
+
+/* bank card container */
+.bankAccount {
+	@apply flex flex-col gap-3 p-5 md:col-span-2 md:row-span-2 hover:bg-[#030712] duration-300 ease-in-out cursor-pointer;
+	border: 1px solid rgb(79 70 229);
+	border-radius: 1.5rem;
+}
+
+/* back icon and name container */
+.bankIcon {
+	@apply flex justify-between items-center;
+}
+
+/* icon container */
+.bankIcon > div {
+	@apply p-2 text-4xl bg-blue-500/25 text-indigo-600;
+	border-radius: 0.5rem;
+}
+
+/* bank name container */
+.bankIcon > span {
+	@apply text-3xl font-semibold text-indigo-500;
+}
+
+/* bank details container */
+.bankDetails {
+	@apply flex flex-col gap-1 md:mt-auto;
+}
+
+/* adding flex styles to all the card details */
+.bankDetails h2,
+h3,
+p,
+h4 {
+	@apply flex justify-between items-center font-medium;
+}
+
+.bankDetails h2 > span,
+h3 > span,
+p > span,
+h4 > span {
+	@apply font-light;
+}
+
+/* bank name styles */
+.bankDetails h2 {
+	@apply text-xl;
+}
+
+/* bank ballance styles */
+.bankDetails h4 > span {
+	@apply text-green-400;
+}
+
+/* crypto card stylings */
+.cryptoCard {
+	@apply p-3 flex flex-col gap-3 hover:bg-[#030712] duration-300 ease-in-out cursor-pointer;
+	border-radius: 1.5rem;
+	border: 1px solid rgb(79 70 229);
+}
+
+/* crypto icon styles */
+.cryptoCard .cryptoCardIcon {
+	@apply flex p-1 text-3xl w-fit ml-auto;
+	border-radius: 0.5rem;
+}
+
+/* details of crypto card */
+.cryptoCardDetails {
+	@apply flex flex-col gap-1;
+}
+
+/* name and quantity styles */
+.cryptoCardDetails h1 {
+	@apply flex justify-between items-center text-xl font-light;
+}
+
+.cryptoCardDetails h1 > span {
+	@apply font-semibold;
+}
+
+.cryptoCardDetails h2 {
+	@apply text-3xl text-center font-thin;
+}
+
+.cryptoCardDetails hr {
+	border-width: 0.3px;
+	opacity: 0.5;
+}

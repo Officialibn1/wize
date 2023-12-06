@@ -18,13 +18,13 @@ export const dummyUserData: UserData = {
 		depositAccount: {
 			accountName: "Savings",
 			accountNumber: "1234567890",
-			bankName: "Bank of Example",
+			bankName: "Chipper Cash",
 		},
 		withdrawalAccounts: [
 			{
 				accountName: "Checking",
 				accountNumber: "0987654321",
-				bankName: "Example Bank",
+				bankName: "PayDay",
 			},
 		],
 	},
