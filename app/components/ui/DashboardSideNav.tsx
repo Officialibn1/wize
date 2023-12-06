@@ -76,12 +76,10 @@ const DashboardSideNav = () => {
 
 					{/* Logout */}
 					<li>
-						<Link
-							href={"/"}
-							onClick={() => signOut()}>
+						<button onClick={() => signOut()}>
 							<IoLogOutOutline />
 							<span>Logout</span>
-						</Link>
+						</button>
 					</li>
 				</ul>
 			</div>

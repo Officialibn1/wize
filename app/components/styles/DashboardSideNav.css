@@ -29,7 +29,7 @@
 
 /* individual list item in the list */
 .sideNavLinks ul li {
-	/* @apply outline; */
+	@apply flex w-full;
 }
 
 .sideNavLinks ul li:last-child {
@@ -37,17 +37,20 @@
 }
 
 /* individaul link in the sidenav */
-.sideNavLinks ul li a {
-	@apply flex gap-1 items-center justify-center w-12 h-12 bg-slate-900/50 lg:w-auto lg:h-auto duration-300 ease-in-out lg:justify-start lg:p-2 lg:hover:bg-slate-900;
+.sideNavLinks ul li a,
+.sideNavLinks ul li button {
+	@apply flex gap-1 items-center justify-center w-12 h-12 bg-slate-900/50 lg:w-full lg:h-auto duration-300 ease-in-out lg:justify-start lg:p-2 lg:hover:bg-slate-900;
 	border-radius: 0.5rem;
 }
 
 /* individaul link span styles in the sidenav */
-.sideNavLinks ul li a span {
+.sideNavLinks ul li a span,
+.sideNavLinks ul li button span {
 	@apply hidden lg:block font-medium;
 }
 
 /* individaul link icon styles in the sidenav */
-.sideNavLinks ul li a svg {
+.sideNavLinks ul li a svg,
+.sideNavLinks ul li button svg {
 	@apply text-3xl;
 }
