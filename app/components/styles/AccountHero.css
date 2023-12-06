@@ -1,0 +1,34 @@
+/* main hero container */
+.accountHeader {
+	background-image: url("/wizehero.jpeg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	@apply text-center;
+}
+
+/* container with linear gradiwnt */
+.accountHeader > div {
+	@apply py-10 px-3 md:px-5 lg:py-24;
+	background: linear-gradient(
+		125deg,
+		rgba(37, 43, 46, 0.5),
+		rgba(46, 45, 58, 0.7),
+		rgba(37, 43, 46, 0.5)
+	);
+}
+
+/* container with text */
+.accountHeader > div > div {
+	@apply flex flex-col py-5 gap-3 md:w-[650px] md:mx-auto;
+}
+
+/* h1 text in the hero */
+.accountHeader > div > div h1 {
+	@apply text-4xl font-bold;
+}
+
+/* p text in the hero */
+.accountHeader > div > div p {
+	@apply text-xl font-light;
+}

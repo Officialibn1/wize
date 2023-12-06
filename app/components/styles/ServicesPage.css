@@ -8,7 +8,8 @@
 
 /* div that have the linear gradient effect */
 .ourServiceHeader > div,
-.ourTechnologyHeader > div {
+.ourTechnologyHeader > div,
+.accountHeader > div {
 	@apply py-10 px-3 md:px-5 lg:py-24;
 	background: linear-gradient(
 		125deg,
