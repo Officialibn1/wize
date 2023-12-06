@@ -1,7 +1,7 @@
 /* hero styles  */
 .heroSection {
 	@apply relative;
-	background-image: url("/pexels-marcus-18033178.jpg");
+	background-image: url("/pexels-marcus-18033178.jpeg");
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
