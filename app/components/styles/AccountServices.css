@@ -5,7 +5,7 @@
 
 /* individual services item container */
 .accountServicesItem {
-	@apply flex lg:max-w-5xl mx-auto;
+	@apply flex lg:max-w-7xl mx-auto;
 }
 
 /* individual services item inner divs */
