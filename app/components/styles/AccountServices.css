@@ -1,0 +1,44 @@
+/* all services list container */
+.accountServices {
+	@apply flex flex-col;
+}
+
+/* individual services item container */
+.accountServicesItem {
+	@apply flex lg:max-w-5xl mx-auto;
+}
+
+/* individual services item inner divs */
+.accountServicesItem > div {
+	@apply flex-1;
+}
+
+/* individual services item first div with text */
+.accountServicesItem > div:first-child {
+	@apply flex py-14 md:py-0;
+}
+
+/* first div inner text wrapper */
+.accountServicesItem > div:first-child > div {
+	@apply w-3/4  md:my-auto md:h-fit xl:w-2/3;
+}
+
+/* title of each item */
+.accountServicesItem > div:first-child > div h1 {
+	@apply text-3xl font-semibold mb-6;
+}
+
+/* paragraph text of each item */
+.accountServicesItem > div:first-child > div p {
+	@apply text-lg font-light;
+}
+
+/* image div container */
+.accountServicesItem > div:last-child {
+	@apply w-full h-full;
+}
+
+/* image tag */
+.accountServicesItem > div:last-child > img {
+	@apply w-full h-full;
+}

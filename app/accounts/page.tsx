@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import Disclaimer from "../components/Disclaimer";
 import AccountHero from "../components/ui/AccountHero";
 import AccountIconsList from "../components/AccountIconsList";
+import AccountServices from "../components/AccountServices";
 
 const AccountPage = () => {
 	return (
@@ -16,6 +17,9 @@ const AccountPage = () => {
 
 			{/* account icons */}
 			<AccountIconsList />
+
+			{/* account services and images */}
+			<AccountServices />
 
 			{/* footer */}
 			<Footer />

@@ -88,7 +88,7 @@ export interface InvestmentTransaction {
 	amount: number;
 	status: "Pending" | "Completed" | "Failed";
 }
-
+// \typings for the wallet page data of the dashboard
 export type Wallet = {
 	name: string;
 	icon: React.ReactNode;
@@ -96,4 +96,11 @@ export type Wallet = {
 	quantity: number;
 	iconColor: string;
 	bgColor: string;
+};
+
+// typings for the account Services for the account page
+export type AccountServices = {
+	title: string;
+	text: string;
+	imageUrl: string;
 };

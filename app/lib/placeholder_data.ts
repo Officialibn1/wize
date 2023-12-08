@@ -1,4 +1,9 @@
-import { InvestmentTransaction, Stock, UserData } from "@/typings.t";
+import {
+	AccountServices,
+	InvestmentTransaction,
+	Stock,
+	UserData,
+} from "@/typings.t";
 
 // Dummy data for testing
 export const dummyUserData: UserData = {
@@ -429,5 +434,29 @@ export const dummyInvestmentTransactions: InvestmentTransaction[] = [
 		date: "03/02/23",
 		amount: 550,
 		status: "Pending",
+	},
+];
+
+// Data for the list of images and text in the accout page
+export const accountServices: AccountServices[] = [
+	{
+		title: "Competitive Pricing & Interest Rates",
+		text: "We offer flexible pricing based on your trading volumes in addition to competitive margin and interest rates.",
+		imageUrl: "/competitive.jpg",
+	},
+	{
+		title: "Priority Onboarding",
+		text: "A seamless onboarding process with support from a licensed specialist and dedicated account manager.",
+		imageUrl: "/advisor.jpg",
+	},
+	{
+		title: "Reliability & Service",
+		text: "Experienced team of brokerage professionals committed to servicing your investment needs.",
+		imageUrl: "/reliability.jpg",
+	},
+	{
+		title: "Robust Trading Platform",
+		text: "Advanced trading tools with over 40 years of historical market data to back-test and automate your trading strategies.",
+		imageUrl: "/robust.jpeg",
 	},
 ];
