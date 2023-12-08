@@ -1,0 +1,44 @@
+/* account list container */
+.accountIconsList {
+	@apply py-20 px-5 flex flex-col items-center;
+}
+
+/* paragraph text before all the icons */
+.accountIconsText {
+	@apply text-lg font-light text-center mb-10 md:w-[700px];
+}
+
+/* container srapping all the image icons */
+.accountIconContainer {
+	@apply grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 items-center xl:max-w-[1400px];
+}
+
+/* Icon and Text title of each service */
+.accountImage {
+	@apply flex flex-col gap-3 items-center h-full;
+}
+
+/* icon container */
+.accountImage > div {
+	@apply h-32 w-32 flex;
+}
+
+/* icon styles */
+.accountImage > div svg {
+	@apply text-8xl m-auto;
+	color: rgba(68, 56, 202, 0.8);
+}
+
+/* service title  */
+.accountImage h1 {
+	@apply text-3xl font-bold text-center;
+	background: linear-gradient(
+		125deg,
+		rgba(14, 164, 233),
+		rgba(68, 56, 202),
+		rgba(14, 164, 233)
+	);
+	-webkit-background-clip: text; /* For Safari */
+	background-clip: text;
+	color: transparent;
+}

@@ -1,6 +1,6 @@
 import React from "react";
 import "@/app/components/styles/AccountHero.css";
-import "@/app/components/styles/ServicesPage.css";
+// import "@/app/components/styles/ServicesPage.css";
 import Link from "next/link";
 
 const AccountHero = () => {
