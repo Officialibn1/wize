@@ -9,7 +9,7 @@ import AccountServices from "../components/AccountServices";
 const AccountPage = () => {
 	return (
 		<section>
-			{/* Navbae */}
+			{/* Navbar */}
 			<HomeNavbar />
 
 			{/* Account hero */}
