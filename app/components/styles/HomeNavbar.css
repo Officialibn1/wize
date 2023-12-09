@@ -1,11 +1,16 @@
 nav {
-	@apply flex justify-end lg:justify-between px-5 py-5 lg:px-10  gap-5 relative z-20;
+	@apply flex justify-end  px-5 py-5 lg:px-10  gap-5 relative z-20;
 	background: linear-gradient(
 		125deg,
 		rgba(14, 164, 233, 0.6),
 		rgba(68, 56, 202, 0.8),
 		rgba(14, 164, 233, 0.4)
 	);
+}
+
+/* lg:justify-between */
+nav > div {
+	/* @apply outline; */
 }
 
 .navLogo {
@@ -18,11 +23,11 @@ nav {
 }
 
 .desktopLinks {
-	@apply gap-8 px-2 hidden lg:flex;
+	@apply gap-8 px-2 hidden lg:flex lg:flex-1;
 }
 
 .desktopLinks ul {
-	@apply flex gap-2 items-center;
+	@apply flex gap-2 items-center lg:ml-[32%];
 }
 
 /* navlinks styles */
