@@ -61,13 +61,7 @@ const HomeNavbar = () => {
 							Services
 						</Link>
 					</li>
-					<li>
-						<Link
-							href={"/faqs"}
-							className={clsx({ "active link": pathName === "/faqs" })}>
-							FAQs
-						</Link>
-					</li>
+
 					<li>
 						<Link
 							href={"/contactus"}
@@ -137,14 +131,7 @@ const HomeNavbar = () => {
 							Services
 						</Link>
 					</li>
-					<li>
-						<Link
-							onClick={() => toggler()}
-							className={clsx({ "active link": pathName === "/faqs" })}
-							href={"/faqs"}>
-							FAQs
-						</Link>
-					</li>
+
 					<li>
 						<Link
 							onClick={() => toggler()}

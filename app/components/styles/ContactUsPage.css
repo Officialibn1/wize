@@ -1,0 +1,9 @@
+/* contact us hero component styles */
+/* hero styles  */
+.contactUsPageHero {
+	@apply relative;
+	background-image: url("/pexels-marcus-18033178.jpeg");
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
