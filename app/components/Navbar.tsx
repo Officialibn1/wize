@@ -5,6 +5,8 @@ import "@/app/components/styles/HomeNavbar.css";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoMdClose } from "react-icons/io";
 import { useSession } from "next-auth/react";
+import clsx from "clsx";
+import { usePathname } from "next/navigation";
 
 const HomeNavbar = () => {
 	const [navState, setNavState] = useState(false);
@@ -13,6 +15,9 @@ const HomeNavbar = () => {
 	const { data: session, status } = useSession();
 
 	// console.log(session?.user);
+
+	// getting the path name
+	const pathName = usePathname();
 
 	const toggler = () => {
 		setNavState((prev) => !prev);
@@ -30,22 +35,38 @@ const HomeNavbar = () => {
 				<ul>
 					<li>
 						<Link
-							className='active'
+							className={clsx({ "active link": pathName === "/" })}
 							href={"/"}>
 							Home
 						</Link>
 					</li>
 					<li>
-						<Link href={"/accounts"}>Accounts</Link>
+						<Link
+							href={"/accounts"}
+							className={clsx({ "active link": pathName === "/accounts" })}>
+							Accounts
+						</Link>
 					</li>
 					<li>
-						<Link href={"/technology"}>Technology</Link>
+						<Link
+							href={"/technology"}
+							className={clsx({ "active link": pathName === "/technology" })}>
+							Technology
+						</Link>
 					</li>
 					<li>
-						<Link href={"/services"}>Services</Link>
+						<Link
+							href={"/services"}
+							className={clsx({ "active link": pathName === "/services" })}>
+							Services
+						</Link>
 					</li>
 					<li>
-						<Link href={"/faqs"}>FAQs</Link>
+						<Link
+							href={"/faqs"}
+							className={clsx({ "active link": pathName === "/faqs" })}>
+							FAQs
+						</Link>
 					</li>
 				</ul>
 			</div>
@@ -80,7 +101,7 @@ const HomeNavbar = () => {
 				<ul>
 					<li>
 						<Link
-							className='active'
+							className={clsx({ "active link": pathName === "/" })}
 							href={"/"}>
 							Home
 						</Link>
@@ -88,6 +109,7 @@ const HomeNavbar = () => {
 					<li>
 						<Link
 							onClick={() => toggler()}
+							className={clsx({ "active link": pathName === "/accounts" })}
 							href={"/accounts"}>
 							Accounts
 						</Link>
@@ -95,6 +117,7 @@ const HomeNavbar = () => {
 					<li>
 						<Link
 							onClick={() => toggler()}
+							className={clsx({ "active link": pathName === "/technology" })}
 							href={"/technology"}>
 							Technology
 						</Link>
@@ -102,6 +125,7 @@ const HomeNavbar = () => {
 					<li>
 						<Link
 							onClick={() => toggler()}
+							className={clsx({ "active link": pathName === "/services" })}
 							href={"/services"}>
 							Services
 						</Link>
@@ -109,6 +133,7 @@ const HomeNavbar = () => {
 					<li>
 						<Link
 							onClick={() => toggler()}
+							className={clsx({ "active link": pathName === "/faqs" })}
 							href={"/faqs"}>
 							FAQs
 						</Link>
