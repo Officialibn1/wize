@@ -1,6 +1,6 @@
 /* all services list container */
 .accountServices {
-	@apply flex flex-col;
+	@apply flex flex-col lg:mt-20;
 }
 
 /* individual services item container */
