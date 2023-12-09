@@ -12,3 +12,8 @@
 .contactUsForm {
 	@apply py-20;
 }
+
+/* const us page text */
+.contactUsText {
+	@apply py-20 px-5 text-lg font-light flex md:px-20 lg:px-40 xl:px-80 2xl:px-96 md:text-center;
+}

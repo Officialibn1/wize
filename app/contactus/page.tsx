@@ -17,6 +17,15 @@ const ContactUsPage = () => {
 			{/* home hero */}
 			<ContactUsPageHero />
 
+			{/* some text paragraphs */}
+			<div className='contactUsText'>
+				<p>
+					We’re here to support our institutional clients in every way. Our
+					trade desk and institutional support team are ready to help you with
+					any trade, account, technical, or miscellaneous needs.
+				</p>
+			</div>
+
 			{/* contact us form */}
 			<ContactUsForm />
 
