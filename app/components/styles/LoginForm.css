@@ -1,5 +1,11 @@
 .formElement {
-	@apply w-[370px] md:w-[400px] m-auto h-fit p-5 flex flex-col gap-5 rounded-2xl bg-slate-900;
+	@apply w-[370px] md:w-[400px] m-auto h-fit p-5 flex flex-col gap-5 rounded-2xl;
+	background: linear-gradient(
+		125deg,
+		rgba(14, 164, 233, 0.6),
+		rgba(68, 56, 202, 0.8),
+		rgba(14, 164, 233, 0.4)
+	);
 }
 
 .formElement legend {
@@ -10,7 +16,7 @@
 
 /* hover effect for the home line */
 .formElement legend a {
-	@apply lg:hover:text-slate-600 duration-300 ease-in-out;
+	@apply lg:hover:text-slate-200 duration-300 ease-in-out cursor-pointer;
 }
 .formElement > h2 {
 	@apply text-xl text-center;
@@ -36,10 +42,13 @@
 
 .formElement label input[type="text"],
 [type="password"],
-[type="email"] {
+[type="email"],
+[type="tel"],
+textarea {
 	@apply rounded-lg bg-transparent;
-	border: 1px solid rgb(51 65 85);
+	border: 1px solid rgb(3, 7, 18);
 	outline: none;
+	color: #fff;
 }
 
 .formElement h3.error {
@@ -47,7 +56,8 @@
 }
 
 .formElement > button {
-	@apply bg-slate-700 text-slate-950 py-3 rounded-xl md:hover:bg-slate-800 font-semibold text-lg;
+	@apply md:hover:text-[#030712] md:hover:bg-transparent ease-in-out duration-300 py-3 rounded-xl bg-[#030712] text-slate-200 font-semibold text-lg;
+	border: 2px solid #030712;
 }
 
 .formElement > p {
@@ -55,5 +65,5 @@
 }
 
 .formElement > p a {
-	@apply text-blue-400;
+	@apply text-blue-400 cursor-pointer md:hover:text-slate-200;
 }

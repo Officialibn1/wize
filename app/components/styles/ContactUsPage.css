@@ -2,8 +2,13 @@
 /* hero styles  */
 .contactUsPageHero {
 	@apply relative;
-	background-image: url("/pexels-marcus-18033178.jpeg");
+	background-image: url("/contactus.jpeg");
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
+}
+
+/* contact us form */
+.contactUsForm {
+	@apply py-20;
 }

@@ -97,7 +97,7 @@ const SignUpForm = () => {
 				<span>Firstname</span>
 				<input
 					type='text'
-					id='lirstname'
+					id='firstname'
 					placeholder='Enter your Firstname'
 					onChange={(e) => setFirstName(e.target.value)}
 					disabled={isLoading}
