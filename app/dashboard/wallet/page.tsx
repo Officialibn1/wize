@@ -7,7 +7,7 @@ import { FaBitcoin, FaEthereum } from "react-icons/fa6";
 import { SiBinance, SiCardano, SiTether } from "react-icons/si";
 import { Wallet } from "@/typings.t";
 
-export const wallets: Wallet[] = [
+const wallets: Wallet[] = [
 	{
 		name: "Bitcoin",
 		icon: <FaBitcoin />,
