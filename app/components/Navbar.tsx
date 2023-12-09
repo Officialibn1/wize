@@ -68,6 +68,13 @@ const HomeNavbar = () => {
 							FAQs
 						</Link>
 					</li>
+					<li>
+						<Link
+							href={"/contactus"}
+							className={clsx({ "active link": pathName === "/contactus" })}>
+							Contact Us
+						</Link>
+					</li>
 				</ul>
 			</div>
 
@@ -136,6 +143,14 @@ const HomeNavbar = () => {
 							className={clsx({ "active link": pathName === "/faqs" })}
 							href={"/faqs"}>
 							FAQs
+						</Link>
+					</li>
+					<li>
+						<Link
+							onClick={() => toggler()}
+							className={clsx({ "active link": pathName === "/contactus" })}
+							href={"/contactus"}>
+							Contact Us
 						</Link>
 					</li>
 				</ul>
